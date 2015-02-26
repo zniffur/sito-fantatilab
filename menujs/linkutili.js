@@ -1,0 +1,5 @@
+document.write (" <table style='width: 150px;' border='0' cellpadding='2' cellspacing='2'> ")
+document.write (" <tbody><tr><td class='newsheader'>&nbsp;&nbsp;LINK UTILI ")
+document.write (" </td></tr><tr><td class='newscell'> ")
+document.write (" <script type='text/javascript'>LinkUtili()</scr" + "ipt></td> ")
+document.write (" </tr></tbody></table> ")

@@ -1,0 +1,5 @@
+document.write (' <table border="0" cellpadding="2" cellspacing="2" width="228"> ')
+document.write (' <tbody><tr><td class="newsheader" height="15px">&nbsp;&nbsp;AGGIORNAMENTO ')
+document.write (' </td></tr><tr bgcolor="#ff0000"><td class="newscell"><b> ')
+document.write (' <script language="Javascript" type="text/javascript"> document.write(aggiornamento) ')
+document.write (" </scr" + "ipt></b><br></td></tr></tbody></table> ")

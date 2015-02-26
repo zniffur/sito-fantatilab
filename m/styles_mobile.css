@@ -1,0 +1,494 @@
+A {
+	COUNTER-INCREMENT: items 1;
+	TEXT-DECORATION: none;
+	color: #000;
+} 
+a:visited {
+	color: #33FFFF;
+}
+
+#hdr-bnr {
+	BACKGROUND-IMAGE: url(images/bnr_bg.gif);
+	PADDING-BOTTOM: 8px;
+	BACKGROUND-COLOR: #2323B3;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	BACKGROUND-REPEAT: repeat-x;
+	PADDING-TOP: 8px
+}
+#hdr-bnr H1 {
+	TEXT-TRANSFORM: uppercase; FONT-FAMILY: Impact, Tahoma, sans-serif, serif; LETTER-SPACING: 2px; COLOR: #0d1e3c; FONT-SIZE: 20px
+}
+#hdr-bnr H1 B {
+	FONT-SIZE: 22px
+}
+#hdr-bnr FONT.bnr_nml_txt {
+	TEXT-TRANSFORM: uppercase; LETTER-SPACING: 1px; COLOR: #ffffff; FONT-SIZE: 11px
+}
+#hdr-bnr FONT.bnr_nml_txt B {
+	FONT-SIZE: 14px
+}
+
+
+BODY {
+	COUNTER-RESET: sections -1;
+	BACKGROUND: #fff;
+	COLOR: #000;
+	BORDER-TOP: 0px;
+	BORDER-BOTTOM: 0px;
+	BORDER-LEFT: 0px;
+	BORDER-RIGHT: 0px;
+	MARGIN: 0px;
+	OUTLINE-STYLE: none;
+	OUTLINE-COLOR: invert;
+	OUTLINE-WIDTH: 0px;
+	PADDING-TOP: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	PADDING-BOTTOM: 0px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+}
+IMG {
+	PADDING-BOTTOM: 0px; 
+	MARGIN: 0px; 
+	PADDING-LEFT: 0px; 
+	PADDING-RIGHT: 0px; 
+	VERTICAL-ALIGN: middle; PADDING-TOP: 0px;
+	BORDER: 0px;
+}
+P {
+	PADDING-BOTTOM: 2px; 
+	MARGIN: 2px 5px; 
+	PADDING-LEFT: 5px; 
+	PADDING-RIGHT: 0px; 
+	PADDING-TOP: 2px
+}
+SPAN {
+	TEXT-DECORATION: none
+}
+UL {
+	PADDING-BOTTOM: 0px; MARGIN: 5px; PADDING-LEFT: 15px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+
+TD {
+	BORDER-BOTTOM: 0px;
+	BORDER-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	FONT-STYLE: inherit;
+	MARGIN: 0px;
+	OUTLINE-STYLE: none;
+	OUTLINE-COLOR: invert;
+	PADDING-LEFT: 0px;
+	OUTLINE-WIDTH: 0px;
+	PADDING-RIGHT: 0px;
+	FONT-FAMILY: inherit;
+	FONT-SIZE: 10pt;
+	BORDER-TOP: 0px;
+	FONT-WEIGHT: inherit;
+	BORDER-RIGHT: 0px;
+	PADDING-TOP: 0px
+}
+.IntLayer {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10px;
+	line-height: 12px;
+	padding-top: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 3px;
+	border: 1px solid #33f; /* è il bordo del layer per nascondere la formazione, arancione */
+	font-weight: bold;
+	background-color: #33F;
+}
+
+.Competizione {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	font-weight: bold;
+	color: #2323B3;
+}
+
+
+.Intestazione {
+	border: 0px solid #2323B3;
+	background-color: #33FFFF; /* lo sfondo arancione del nome della squadra nella tabella formazione */
+	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #2323B3;
+	font-weight: bold;
+	border: 1px solid #0033FF;
+	text-align: center;
+	line-height: 30px;
+	width: 100%;
+}
+
+
+.a {
+	PADDING-BOTTOM: 5px; MARGIN: 0px; PADDING-LEFT: 5px; WIDTH: 100%; PADDING-RIGHT: 0px; BACKGROUND: url(logo_repeater3.png) #69a622 repeat-x center top; COLOR: #fff; FONT-SIZE: 130%; PADDING-TOP: 10px
+}
+.b {
+	MARGIN: 0px; WIDTH: 100%; BACKGROUND: #fff; COLOR: #000; COUNTER-INCREMENT: sections 1
+}
+.c {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px;  COLOR: #000;  PADDING-TOP: 0px
+}
+.d {
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	COLOR: #000000;
+	PADDING-TOP: 0px;
+	vertical-align: middle;
+}
+.e {
+	MARGIN: 0px; WIDTH: 100%; COUNTER-INCREMENT: sections 1
+}
+.f {
+	BORDER-SPACING: 0
+}
+.g {
+	COLOR: #0084ed; FONT-SIZE: xx-small
+}
+.h {
+	BORDER-SPACING: 1px
+}
+.i {
+	TEXT-ALIGN: center; LIST-STYLE-TYPE: none; BORDER-SPACING: 0; VERTICAL-ALIGN: middle
+}
+.j {
+	MARGIN: 2px 5px; COUNTER-INCREMENT: sections 1
+}
+.k {
+	MARGIN: 2px 5px; FONT-SIZE: x-small
+}
+.l {
+	TEXT-ALIGN: center; BORDER-SPACING: 0; FONT-SIZE: x-small; VERTICAL-ALIGN: middle
+}
+.m {
+	COLOR: #000
+}
+.n {
+	COLOR: #000; FONT-SIZE: xx-small
+}
+.o {
+	PADDING-BOTTOM: 5px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 5px; BORDER-SPACING: 2px; WIDTH: 100%; PADDING-RIGHT: 0px; BACKGROUND: url(nav_repeater3.png) #fff repeat-x center top; COLOR: #333; COUNTER-INCREMENT: sections 1; TEXT-DECORATION: none; PADDING-TOP: 10px
+}
+.p {
+	PADDING-BOTTOM: 5px; MARGIN: 0px; PADDING-LEFT: 5px; WIDTH: 100%; PADDING-RIGHT: 0px; BACKGROUND: #fff 0% 50%; COLOR: #aaa; FONT-SIZE: 95%; PADDING-TOP: 10px
+}
+.q {
+	PADDING-BOTTOM: 5px;
+	MARGIN: 0px;
+	PADDING-LEFT: 5px;
+	PADDING-RIGHT: 0px;
+	COLOR: #fff;
+	PADDING-TOP: 10px;
+	background-color: #2323B3;
+	background-image: url(http://fantacalciobm.altervista.org/wap/logo_repeater4.png);
+	background-repeat: repeat-x;
+	background-position: center top;
+}
+.r {
+	PADDING-BOTTOM: 2px;
+	MARGIN: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	PADDING-TOP: 0px;
+	vertical-align: middle;
+	background-color: #33FFFF;
+}
+.s {
+	PADDING-BOTTOM: 2px;
+	MARGIN: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	PADDING-TOP: 0px;
+	vertical-align: middle;
+	background-color: #ccffff;
+}
+INPUT {
+	FONT-SIZE: 12px
+}
+SELECT {
+	MAX-WIDTH: 150px; FONT-SIZE: 12px
+}
+[type='button'] {
+	FONT-SIZE: 9px
+}
+
+
+.nws_article {
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0px 0px 10px;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	DISPLAY: block;
+	BACKGROUND-POSITION: -1000% 50%;
+	COLOR: #2323B3;
+	PADDING-TOP: 0px;
+	background-color: #33FFFF;
+}
+
+.nws_snipp_lst {
+	BORDER-BOTTOM: #e5e5e5 1px solid;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0px auto;
+	PADDING-LEFT: 0px;
+	WIDTH: 100%;
+	PADDING-RIGHT: 0px;
+	DISPLAY: block;
+	FLOAT: left;
+	COLOR: #2323B3;
+	TEXT-DECORATION: none;
+	PADDING-TOP: 0px;
+	background-color: #FFF;
+	font-size: 12pt;
+	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+.nws_snipp_lst:hover {
+	BACKGROUND-IMAGE: url(images/lst_arw_hvr.png);
+	PADDING-BOTTOM: 0px;
+	BACKGROUND-COLOR: #33FFFF;
+	MARGIN: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	DISPLAY: block;
+	BACKGROUND-REPEAT: no-repeat;
+	BACKGROUND-POSITION: 100% 14px;
+	PADDING-TOP: 0px;
+	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+.nws_snipp_lst:focus {
+	BACKGROUND-IMAGE: url(images/lst_arw_hvr.png);
+	PADDING-BOTTOM: 0px;
+	BACKGROUND-COLOR: #99FFFF;
+	MARGIN: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	DISPLAY: block;
+	BACKGROUND-REPEAT: no-repeat;
+	BACKGROUND-POSITION: 100% 14px;
+	PADDING-TOP: 0px;
+	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+.nws_snipp_lst H3 {
+	PADDING-BOTTOM: 0px;
+	LINE-HEIGHT: 18px;
+	MARGIN: 6px 20px 0px 0px;
+	PADDING-LEFT: 2px;
+	PADDING-RIGHT: 0px;
+	DISPLAY: block;
+	COLOR: #2323B3;
+	FONT-SIZE: 14pt;
+	PADDING-TOP: 0px
+	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+.nws_snipp_lst:hover H3 {
+	COLOR: #2323B3
+	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 14pt;
+}
+.nws_snipp_lst:hover P {
+	COLOR: #2323B3
+	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif}
+.nws_snipp_lst P {
+	PADDING-BOTTOM: 2px;
+	MARGIN: 0px 20px 0px 0px;
+	PADDING-LEFT: 2px;
+	PADDING-RIGHT: 0px;
+	DISPLAY: block;
+	COLOR: #000;
+	FONT-SIZE: 11px;
+	PADDING-TOP: 0px;
+	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+.cellaBottone{
+	width: 25%;
+	text-align: center;
+	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 10pt;
+	vertical-align: top;
+	}
+	
+	
+.Bottone{
+	width: 74px;
+	border: 0;
+	}
+	
+		
+.TornaSu{
+	height: 30px;
+	border: 0;
+	}
+
+.CellaRvRosso {
+	border: 1px solid #0033FF;
+	background: #DD0000;
+	color: #FFFFFF;
+}
+.CellaRvVerde {
+	border: 1px solid #0033FF;
+	background: #00A800;
+	color: #FFFFFF;
+}
+.CellaCentroVerde {
+	border: 1px solid #0033FF;
+	text-align: center;
+	background-color:#00CC00;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+
+.IntBlu {
+	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #FFF;
+	font-weight: bold;
+	border: 1px solid #0033FF;
+	text-align: center;
+	background-position: center;
+	line-height: 30px;
+	background-color: #2323B3;
+}
+.IntRosso {
+	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #FFF;
+	font-weight: bold;
+	border: 1px solid #0033FF;
+	text-align: center;
+	background-position: center;
+	line-height: 30px;
+	background-color: #C00;
+}
+.IntGiallo {
+	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-align: center;
+	background-position: center;
+	line-height: 30px;
+	text-decoration: none;
+	background-color: #2323B3;
+}
+
+
+.Ris {
+	background-color: #99FFFF;
+}
+
+
+.QueryP {
+	background-color: #99FFFF;
+}
+
+
+.t-xxsB {
+	align: center;
+}
+
+.t-xxsVB {
+	align: center;
+	color: #390;
+}
+
+
+.t-xsWB {
+	align: center;
+	color: #009;
+	font-weight: bold;
+}
+.t-xxsRB {
+	align: center;
+	color: #F00;
+}
+
+.t-xxsP {
+	color: #990;
+}
+
+
+.t-xxsD {
+	color: #090;
+}
+
+
+.t-xxsC {
+	color: #c00;
+}
+
+.t-xxsA {
+	color: #30c;
+}
+
+.t-xxsGB {
+	color: #990;
+}
+
+.t-xxsBluB {
+	color: #30c;
+}
+
+
+.t-xxsI {
+	color: #999;
+}
+.t-xxsR {
+	color: #999;
+}
+
+.t-xxs {
+	color: #000;
+}
+.FormPCentro{
+	color: #000;
+}
+
+.FormDCentro{
+	color: #000;
+}
+
+.FormCCentro{
+	color: #000;
+}
+
+.FormACentro{
+	color: #000;
+}
+
+.RvPCentro{
+	color: #000;
+}
+
+.RvDCentro{
+	color: #000;
+}
+
+
+.CellaRvVerdeCentro {
+	align: center;
+	color: #390;
+}
+
+.CellaRvRossoCentro {
+	align: center;
+	color: #f00;
+}
+.totoD {
+	background-position: center;
+	text-align: center;
+	border: 1px solid #CCC;
+	margin: 2px;
+	padding: 0px;
+}
+
+.totoP {
+	background-position: center;
+	text-align: center;
+	border: 1px solid #CCC;
+}

@@ -1,0 +1,90 @@
+.t-xxsRosso {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	color: #OOOOOO;
+	font-weight: bold;
+	text-align: center; 
+	background-color: #FF0000;
+
+}
+.t-xxsGiallo {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	color: #OOOOOO;
+	font-weight: bold;
+	text-align: center; 
+	background-color: #FFFF66;
+
+}
+.t-xxsVerde {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	color: #OOOOOO;
+	font-weight: bold;
+	text-align: center; 
+	background-color: #66FF33;
+
+}
+
+.t-xxsNero {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	font-weight: bold;
+	color: #000000;
+	text-align: center; 
+}
+.t-xxsBianco {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	font-weight: bold;
+	color: #ffffff;
+	text-align: center; 
+
+}
+.rigaincrocipari{
+	background-color: White;
+	border: none; /*1px solid #2323B3;*/
+
+	}
+.rigaincrocidispari{
+	background-color: #ccffff;
+	border: none; /*1px solid #2323B3;*/
+	}
+.rigaintestazione {
+	border: 1px solid #2323B3;
+	background-image: url(img/sfu-vs.bmp);	
+	background-repeat: repeat;	
+	background-position: bottom;
+	color: #ffffff;	font-weight: bold;	
+	text-align: center; 
+}
+
+.rigasquadre {
+	border: 1px solid #2323B3;
+	background-image: url(img/sfu-vc.bmp);	
+	background-repeat: repeat;	
+	background-position: bottom;
+	color: #2323B3;	font-weight: bold;	
+	text-align: center; 
+}
+.cellasquadra {
+	border: 1px solid #2323B3;
+	background-image: url(img/sfu-vc.bmp);	
+	background-repeat: repeat;	
+	background-position: bottom;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	font-weight: bold;
+	color: #000000;
+	text-align: center; 
+}
+
+.ClassTabellaincroci {
+	border: 1px solid #2323B3;
+	border-color: #2323B3;	
+	border-collapse: collapse;	
+	font-family: Tahoma, Verdana, Arial;  
+	font-size: 8pt;
+}
+
+

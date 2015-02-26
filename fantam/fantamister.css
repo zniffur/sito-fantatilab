@@ -1,0 +1,319 @@
+/*stili per TUTTI I FILE*/
+html, body         {margin: 0; padding: 0;}
+
+/*stili per il CLASSIFICA MARCATORI (File: cannonieri.htm) */
+div#cannonieri   {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; width: 220px; margin: 0 auto; margin-bottom: 0; border: 0px;}
+table.cannonieri {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; width: 220px;}
+tr.cannonieri    {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;}
+.canTITOLO       {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #FFFFFF; font-weight: bold;   text-align: left;   vertical-align: middle; background-color: #EB6095; width: 220px; height: 15px; margin-bottom: 0; border: 0px;}
+.canGOLp         {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #C6C6C6;
+	width: 15px;
+	height: 15px;
+	margin-bottom: 0;
+	border: 0px;
+}
+.canGOLd         {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #FFFFFF;
+	width: 15px;
+	height: 15px;
+	margin-bottom: 0;
+	border: 0px;
+}
+.canNOMEp        {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: left;   vertical-align: middle; background-color: #C6C6C6; width: 205px; height: 15px; margin-bottom: 0; border: 0px;}
+.canNOMEd        {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: left;   vertical-align: middle; background-color: #FFFFFF; width: 205px; height: 15px; margin-bottom: 0; border: 0px;}
+
+/*stili per il TOP&FLOP (File: top11.htm - top11s.htm - flop11.htm - flop11s.htm) */
+div#topflop   {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; width: auto; margin: 0 auto; margin-bottom: 0; border: 0px;}
+table.topflop {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; width: 300px;}
+tr.topflop    {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;}
+.tpTITOLO     {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #FFFFFF; font-weight: bold;   text-align: left;   vertical-align: middle; background-color: #EB6095; width: 300px; height: 15px; margin-bottom: 0; border: 0px;}
+.tpRUOLOp     {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: bold;   text-align: center; vertical-align: middle; background-color: #C6C6C6; width:  20px; height: 15px; margin-bottom: 0; border: 0px;}
+.tpRUOLOd     {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: bold;   text-align: center; vertical-align: middle; background-color: #FFFFFF; width:  20px; height: 15px; margin-bottom: 0; border: 0px;}
+.tpNOMEp      {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: left;   vertical-align: middle; background-color: #C6C6C6; width: 280px; height: 15px; margin-bottom: 0; border: 0px;}
+.tpNOMEd      {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: left;   vertical-align: middle; background-color: #FFFFFF; width: 280px; height: 15px; margin-bottom: 0; border: 0px;}
+
+/*stili per il MIGLIORE IN CAMPO (File: uomopartita.htm) */
+div#mom    {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; width: auto; margin: 0 auto; margin-bottom: 0; border: 0px;}
+table.mom  {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; width: 300px;}
+tr.mom     {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;}
+.momTITOLO {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #FFFFFF; font-weight: bold;   text-align: left;   vertical-align: middle; background-color: #EB6095; width: 300px; height: 15px; margin-bottom: 0; border: 0px;}
+.momNUMp   {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: center; vertical-align: middle; background-color: #C6C6C6; width:  20px; height: 15px; margin-bottom: 0; border: 0px;}
+.momNUMd   {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: center; vertical-align: middle; background-color: #FFFFFF; width:  20px; height: 15px; margin-bottom: 0; border: 0px;}
+.momNOMEp  {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: left;   vertical-align: middle; background-color: #C6C6C6; width: 280px; height: 15px; margin-bottom: 0; border: 0px;}
+.momNOMEd  {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: left;   vertical-align: middle; background-color: #FFFFFF; width: 280px; height: 15px; margin-bottom: 0; border: 0px;}
+
+/*stili per il FANTASFIGA (File: fantasfiga.htm) */
+div#fs    {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; width: auto; margin: 0 auto; margin-bottom: 0; border: 0px;}
+table.fs  {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; width: 300px;}
+tr.fs     {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;}
+.fsTITOLO {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #FFFFFF; font-weight: bold;   text-align: left;   vertical-align: middle; background-color: #EB6095; width: 300px; height: 15px; margin-bottom: 0; border: 0px;}
+.fsNUMp   {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: center; vertical-align: middle; background-color: #C6C6C6; width:  40px; height: 15px; margin-bottom: 0; border: 0px;}
+.fsNUMd   {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: center; vertical-align: middle; background-color: #FFFFFF; width:  40px; height: 15px; margin-bottom: 0; border: 0px;}
+.fsNOMEp  {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: left;   vertical-align: middle; background-color: #C6C6C6; width: 260px; height: 15px; margin-bottom: 0; border: 0px;}
+.fsNOMEd  {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: left;   vertical-align: middle; background-color: #FFFFFF; width: 260px; height: 15px; margin-bottom: 0; border: 0px;}
+
+/*stili per il BEST ROSE (File: bestrose.htm) */
+div#bs    {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; width: auto; margin: 0 auto; margin-bottom: 0; border: 0px;}
+table.bs  {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; width: 250px;}
+tr.bs     {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;}
+.bsTITOLO {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #FFFFFF; font-weight: bold;   text-align: left;   vertical-align: middle; background-color: #EB6095; width: auto; height: 15px; margin-bottom: 0; border: 0px;}
+.bsSPAZIO {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #FFFFFF; font-weight: bold;   text-align: left;   vertical-align: middle; background-color: #FFCCFF; width: auto; height: 15px; margin-bottom: 0; border: 0px;}
+.bsSOTTIT {font-family: Verdana, Arial, Helvetica, sans-serif; font-size:  9px; color: #000000; font-weight: bold;   font-style: italic; text-align: center; vertical-align: middle; background-color: #FFCCFF; width: 150px; height: 15px; margin-bottom: 0; border: 0px;}
+.bsNOMEp  {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: left;   vertical-align: middle; background-color: #C6C6C6; width: 100px; height: 15px; margin-bottom: 0; border: 0px;}
+.bsNOMEd  {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: left;   vertical-align: middle; background-color: #FFFFFF; width: 100px; height: 15px; margin-bottom: 0; border: 0px;}
+.bsNUMp   {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: center; vertical-align: middle; background-color: #C6C6C6; width: 150px; height: 15px; margin-bottom: 0; border: 0px;}
+.bsNUMd   {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: center; vertical-align: middle; background-color: #FFFFFF; width: 150px; height: 15px; margin-bottom: 0; border: 0px;}
+
+/*stili per il FANTASFIGA (File: icomedia.htm - icomtot.htm) */
+div#ico    {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; width: auto; margin: 0 auto; margin-bottom: 0; border: 0px;}
+table.ico  {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; width: 350px;}
+tr.ico     {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;}
+.icoTITOLO {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #FFFFFF; font-weight: bold;   text-align: left;   vertical-align: middle; background-color: #EB6095; width: auto; height: 15px; margin-bottom: 0; border: 0px;}
+.icoNUMp   {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: center; vertical-align: middle; background-color: #C6C6C6; width:  50px; height: 15px; margin-bottom: 0; border: 0px;}
+.icoNUMd   {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: center; vertical-align: middle; background-color: #FFFFFF; width:  50px; height: 15px; margin-bottom: 0; border: 0px;}
+.icoNOMEp  {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: left;   vertical-align: middle; background-color: #C6C6C6; width: 300; height: 15px; margin-bottom: 0; border: 0px;}
+.icoNOMEd  {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: left;   vertical-align: middle; background-color: #FFFFFF; width: 300; height: 15px; margin-bottom: 0; border: 0px;}
+
+/*stili per il ULTIMA GIORNATA E CALENDARIO MARCATORI (File: ultima.htm - calenbomber.htm) */
+div#ris       {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	width: 545px;
+	margin: 0 auto;
+	margin-bottom: 0;
+	border: 0px;
+	text-align: center;
+}
+table.ris     {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; width: auto;}
+tr.ris        {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;}
+.risTITOLO    {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #EB6095;
+	width: 550px;
+	height: 15px;
+	margin-bottom: 0;
+	border: 0px;
+}
+.risSQUADRA   {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	font-weight: bold;
+	vertical-align: middle;
+	background-color: #C6C6C6;
+	width: 305px;
+	height: 15px;
+	margin-bottom: 0;
+	border: 0px;
+	padding: 0 3px 0 3px;
+}
+.risRISULTATO {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; color: #000000; font-weight: bold; vertical-align: middle; background-color: #909090; width: 30px;  height: 15px; margin-bottom: 0; border: 0px;}
+.risSPAZIO    {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; color: #000000; font-weight: bold; vertical-align: middle; background-color: #FFFFFF; width: 20px;  height: 23px; margin-bottom: 0; border: 0px;}
+.risMARCATORI {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: normal;
+	vertical-align: middle;
+	background-color: #FFFFFF;
+	width: 305px;
+	height: 15px;
+	margin-bottom: 0;
+	border: 0px;
+	padding: 0 3px 0 3px;
+}
+.risMOM       {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; vertical-align: middle; background-color: #DDDDDD; width: 100%; height: 15px;}
+
+/*stili per il FANTAMISTER (File: fantamister.htm) */
+div#fm    {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; width: 550px; margin: 0 auto; margin-bottom: 0; border: 0px;}
+table.fm  {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; width: 550px; border: 1px solid #EB6095;}
+tr.fm     {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;}
+.fmTITOLO {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #FFFFFF; font-weight: bold; text-align: center; vertical-align: middle; background-color: #EB6095; width: 650px; height: 15px; margin-bottom: 0; border: 0px;}
+/*stili per Tabella: RIEPILOGO TOTALE SCARTO ASSOLUTO*/
+.scartoSQUADRA {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: bold; text-align: center; vertical-align: middle; background-color: #C6C6C6; width: 130px; height: 15px; margin-bottom: 0; border: 0px;}
+.scartoDATI    {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: bold; text-align: center; vertical-align: middle; background-color: #C6C6C6; width: 83px;  height: 15px; margin-bottom: 0; border: 0px;}
+/*stili per Tabella: RIEPILOGO TOTALE SCARTO PESATO SU VOTI VALIDI*/
+.riepilogoSQUADRA {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: bold; text-align: center; vertical-align: middle; background-color: #C6C6C6; width: 130px; height: 15px; margin-bottom: 0; border: 0px;}
+.riepilogoDATI    {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: bold; text-align: center; vertical-align: middle; background-color: #C6C6C6; width: 100px; height: 15px; margin-bottom: 0; border: 0px;}
+.riepilogoSPAZIO  {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: bold; text-align: center; vertical-align: middle; background-color: #C6C6C6; width: 350px; height: 15px; margin-bottom: 0; border: 0px;}
+/*stili per Tabella: DETTAGLIO MIGLIORI MODULI - Tutti i tipi*/
+.moduliTITOLO {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: bold;   text-align: center; vertical-align: middle; background-color: #C6C6C6; width: 650px; height: 15px; margin-bottom: 0; border: 0px;}
+.moduliDATI   {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: center; vertical-align: middle; background-color: #FFFFFF; width: 317px; height: 15px; margin-bottom: 0; border: 0px;}
+.moduliIMG    {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: bold;   text-align: center; vertical-align: middle; background-color: #FFFFFF; width: 16px;  height: 16px; margin-bottom: 0; border: 0px none; background-image: url('img1.png'); background-position:  center 50%; background-repeat: no-repeat }
+/*stili per Tabella: DETTAGLIO GIORNATE*/
+.giornateSQUADRA {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: bold; text-align: center; vertical-align: middle; background-color: #C6C6C6; width: 140px;  height: 15px; margin-bottom: 0; border: 0px;}
+.giornateSCARTO  {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: bold; text-align: center; vertical-align: middle; background-color: #C6C6C6; width: 48px;   height: 15px; margin-bottom: 0; border: 0px;}
+.giornateVOTI    {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: bold; text-align: center; vertical-align: middle; background-color: #C6C6C6; width: 38px;   height: 15px; margin-bottom: 0; border: 0px;}
+.giornateSCAVOTI {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: bold; text-align: center; vertical-align: middle; background-color: #C6C6C6; width: 48px;   height: 15px; margin-bottom: 0; border: 0px;}
+.giornatePARZ    {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: bold; text-align: center; vertical-align: middle; background-color: #C6C6C6; width: 90px;  height: 15px; margin-bottom: 0; border: 0px;}
+.giornateMAX     {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: bold; text-align: center; vertical-align: middle; background-color: #C6C6C6; width: 328px;  height: 15px; margin-bottom: 0; border: 0px;}
+
+/*stili per il STATISTICHE SQUADRE (File: sq*.htm) */
+div#sq     {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; width: 550px; margin: 0 auto; margin-bottom: 0; border: 0px;}
+table.sq   {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; width: 550px; border: 1px solid #EB6095;}
+tr.sq      {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;}
+.sqSQUADRA {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 18px; color: #FFFFFF; font-weight: bold; text-align: left; vertical-align: middle; background-color: #EB6095; width: 650px; height: 15px; margin-bottom: 0; border: 0px;}
+/*stili per Tabella: MODULI UTILIZZATI*/
+.sqTITMODULI    {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #FFFFFF; font-weight: bold; text-align: center; vertical-align: middle; background-color: #EB6095; width: 650px; height: 15px; margin-bottom: 0; border: 0px;}
+.sqmoduliDATI   {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: center; vertical-align: middle; background-color: #FFFFFF; width: 317px; height: 15px; margin-bottom: 0; border: 0px;}
+.sqmoduliIMG    {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: bold;   text-align: center; vertical-align: middle; background-color: #FFFFFF; width: 16px;  height: 16px; margin-bottom: 0; border: 0px none; background-image: url('img1.png'); background-position:  center 50%; background-repeat: no-repeat }
+/*stili per Tabella: FANTACANNONIERI*/
+.sqCANNONIERI {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #FFFFFF; font-weight: bold; text-align: center; vertical-align: middle; background-color: #EB6095; width: 650px; height: 15px; margin-bottom: 0; border: 0px;}
+.sqGOLp       {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: center; vertical-align: middle; background-color: #C6C6C6; width:  20px; height: 15px; margin-bottom: 0; border: 0px;}
+.sqGOLd       {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: center; vertical-align: middle; background-color: #FFFFFF; width:  20px; height: 15px; margin-bottom: 0; border: 0px;}
+.sqNOMEp      {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: left;   vertical-align: middle; background-color: #C6C6C6; width: 630px; height: 15px; margin-bottom: 0; border: 0px;}
+.sqNOMEd      {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: left;   vertical-align: middle; background-color: #FFFFFF; width: 630px; height: 15px; margin-bottom: 0; border: 0px;}
+/*stili per Tabella: PRESENZE*/
+.sqPRESENZE {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #FFFFFF; font-weight: bold; text-align: center; vertical-align: middle; background-color: #EB6095; width: 650px; height: 15px; margin-bottom: 0; border: 0px;}
+.sqNUMp     {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: center; vertical-align: middle; background-color: #C6C6C6; width:  20px; height: 15px; margin-bottom: 0; border: 0px;}
+.sqNUMd     {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: center; font-style: italic; vertical-align: middle; background-color: #FFFFFF; width:  20px; height: 15px; margin-bottom: 0; border: 0px;}
+.sqGIOp     {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: left;   vertical-align: middle; background-color: #C6C6C6; width: 630px; height: 15px; margin-bottom: 0; border: 0px;}
+.sqGIOd     {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal; text-align: left;   font-style: italic; vertical-align: middle; background-color: #FFFFFF; width: 630px; height: 15px; margin-bottom: 0; border: 0px;}
+
+table.fantahisto{
+	width: 500px;
+	height: auto;
+	font-family: "Trebuchet MS", verdana, arial, helvetica, sans-serif;
+   	font-size: small;
+}
+table.fantahisto tr.intestazione, tr.intestazione2a{
+	background-color: #EBAAAA;
+}
+
+table.fantahisto td.int_tendina{
+	text-align: left;
+	padding-left: 5px;
+}
+
+table.fantahisto td.int_generale, td.int_incasa, td.int_fuoricasa{
+	text-align: center;
+	border-left: 1px dotted black;
+	font-weight: bold;
+}
+
+table.fantahisto td.int2_nomesquadra{
+	text-align: left;
+	padding-left: 5px;
+	border-bottom: 1px dotted black;
+	font-weight: bold;
+}
+table.fantahisto td.int_giocate, td.int_gen_v, td.int_gen_n, td.int_gen_p,	td.int_gen_gf,	td.int_gen_gs {
+	border-bottom: 1px dotted black;
+	text-align: center;
+	font-weight: bold;
+}	
+
+table.fantahisto td.int_giocate, td.int_casa_v{
+	border-left: 1px dotted black;
+	font-weight: bold;
+}
+
+table.fantahisto td.int_casa_v, td.int_casa_n, td.int_casa_p {
+	border-bottom: 1px dotted black;
+	text-align: center;
+	font-weight: bold;
+}
+
+table.fantahisto td.int_fuori_v{
+	border-left: 1px dotted black;
+	font-weight: bold;
+}
+table.fantahisto td.int_fuori_n, td.int_fuori_v, td.int_fuori_p{
+	border-bottom: 1px dotted black;
+	text-align: center;
+	font-weight: bold;
+}
+
+
+table.fantahisto td.dati_squa {
+	text-align: left;
+	padding-left: 5px;
+	border-bottom: 1px dotted black;
+	font-weight: bold;
+	background-color:  #ffe1ed;
+}
+
+table.fantahisto td.dati_tot_g {
+	font-weight: bold;
+	text-align: right;
+	padding-right: 5px;
+	border-left: 1px dotted black;
+	border-bottom: 1px dotted black;
+	background-color:  #ffe1ed;
+}
+
+table.fantahisto td.dati_gen_v, td.dati_gen_n, td.dati_gen_p, td.dati_gen_gf, td.dati_gen_gs {
+	text-align: right;
+	padding-right: 5px;
+	border-bottom: 1px dotted black;
+	background-color:  #ffe1ed;
+}
+
+table.fantahisto td.dati_casa_v{
+	border-left: 1px dotted black;
+} 
+
+table.fantahisto td.dati_casa_v, td.dati_casa_n, td.dati_casa_p {
+	text-align: right;
+	padding-right: 5px;
+	border-bottom: 1px dotted black;
+	background-color:  #ffe1ed;
+}
+
+table.fantahisto td.dati_fuori_v{
+	border-left: 1px dotted black;
+	background-color:  #ffe1ed;
+} 
+
+table.fantahisto td.dati_fuori_v, td.dati_fuori_n, td.dati_fuori_p {
+	text-align: right;
+	padding-right: 5px;
+	border-bottom: 1px dotted black;
+	background-color:  #ffe1ed;
+}
+
+table.fantahisto tr.bb, tr.er{
+ 	line-height: 25px;
+	background-color:  #DED3CE;
+	font-weight: bold;}       
+
+table.fantahisto td.bb_int {
+  	text-align: left;
+	padding-left: 5px;
+	border-bottom: 1px dotted black;
+	font-weight: bold;
+} 
+
+table.fantahisto td.bb_nome, td.bb_valore {
+	border-bottom: 1px dotted black;
+	font-weight: bold;
+} 
+
+table.fantahisto td.er_int{
+	text-align: left;
+	padding-left: 5px;
+	border-bottom: 1px dotted black;
+	font-weight: bold;
+} 
+
+table.fantahisto td.er_nome td.er_valore {
+	border-bottom: 1px dotted black;
+} 

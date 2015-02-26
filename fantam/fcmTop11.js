@@ -1,0 +1,13 @@
+var arrTop11=new Array()
+a = arrTop11
+a[1]=new T11("P","PADELLI Dan","Arte Della Topa",9)
+a[2]=new T11("D","RUGANI Dan","Santos (do Bareira)",10)
+a[3]=new T11("D","MARIO RUI Dua","Pro Zniffur",7)
+a[4]=new T11("D","KOULIBALY Kal","Pro Zniffur",7)
+a[5]=new T11("C","CANDREVA Ant","Augusta Romulea FC",10.5)
+a[6]=new T11("C","BONAVENTURA Gia","Amazzulu FC",10)
+a[7]=new T11("C","MAURI Ste","Atletico Carione",10)
+a[8]=new T11("C","FALQUE Iag","Arte Della Topa",10)
+a[9]=new T11("C","KOVACIC Mat","River Cyccy",10)
+a[10]=new T11("A","MACCARONE Mas","Santos (do Bareira)",13.5)
+a[11]=new T11("A","ZAPATA Duv","Il Grande Bluff",11)
