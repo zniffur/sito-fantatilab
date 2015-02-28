@@ -3,7 +3,7 @@
 		Campionato: 22a Camp. (Ritorno)									
 		Amazzulu FC						CamPaz			
 	R	Nome	Voto	Mod	Tot		R	Nome	Voto	Mod	Tot
-	P	MIRANTE Antonio	5,5	0	5,5		P	DE SANCTIS Morgan	6	-1	5
+	P	MIRANTE Antonio	4	0	4		P	DE SANCTIS Morgan	6	-1	5
 	D	BASANTA Jose Maria	6	0	6		D	ASTORI Davide	6	0	6
 	D	CAPUANO Marco	5	0	5		D	DE VRIJ Stefan	6	0	6
 	DR	CASSANI Mattia	5,5	0	5,5		D	TONELLI Lorenzo	6,5	0	6,5
@@ -14,13 +14,13 @@
 	CR	FETFATZIDIS Joannis	6	0	6		CR	GAZZI Alessandro	6	0	6
 	A	EDER Martins Citadin	7	2,5	9,5		A	LJAJIC Adem	6,5	0	6,5
 	A	TONI Luca	6	0	6		A	PODOLSKI Lukas	5	0	5
-				Parziale squadra	70					Parziale squadra	64
+				Parziale squadra	68,5					Parziale squadra	64
 				Fattore campo	2					Fattore campo	0
 				Modificatore portiere	0					Modificatore portiere	0
 				Modificatore difesa	0					Modificatore difesa	0,5
 				Modificatore centrocampo	0					Modificatore centrocampo	0
 				Modificatore modulo	0,5					Modificatore modulo	0,5
-				Totale squadra	72,5					Totale squadra	65
+				Totale squadra	71					Totale squadra	65
 				Gol	2					Gol	0
 											
 		Sostituiti, panchina e tribuna						Sostituiti, panchina e tribuna			
@@ -72,7 +72,7 @@
 	C	MARESCA Enzo	sv/ng	0	sv/ng		C	OBIANG Pedro Mba	6,5	-0,5	6
 	C	DE ROSSI Daniele	sv/ng	0	sv/ng		C	WIDMER Silvan	5,5	0	5,5
 	C	BIONDINI Davide	5,5	0	5,5		C	ILICIC Josip	6	0	6
-	C	GIORGI Luigi	5,5	0	5,5		A	TAVANO Francesco	5	0	5
+	C	GIORGI Luigi	5,5	-0,5	5		A	TAVANO Francesco	5	0	5
 	C	VIVES Giuseppe	6	2,5	8,5		A	AMAURI Carvalho	sv/ng	0	sv/ng
 	A	GOMEZ Mario	sv/ng	0	sv/ng		A	KEITA Balde Diao	6	0	6
 	A	SANSONE Nicola Domenico	sv/ng	0	sv/ng		p	ICHAZO Salvador	sv/ng	0	sv/ng
@@ -93,8 +93,8 @@
 	C	BARRETO Edgar Osvaldo	5	-1	4		D	MANOLAS Kostas	6	-0,5	5,5
 	C	DE JONG Nigel	6,5	0	6,5		C	KOVACIC Mateo	7	3	10
 	C	NAINGGOLAN Radja	6,5	-0,5	6		C	POGBA Paul	5	0	5
-	C	PIRLO Andrea	7	3	10		CR	BIRSA Valter	6	0	6
-	C	SALAH Mohamed	7	3	10		CR	NOCERINO Antonio	5,5	0	5,5
+	C	PIRLO Andrea	7	3	10		CR	SCHELOTTO Ezequiel Matias	5,5	0	5,5
+	C	SALAH Mohamed	7	3	10		CR	BIRSA Valter	6	0	6
 	A	OKAKA CHUKA Stefano	6	0	6		A	DENIS German Gustavo	5	0	5
 	AR	DI NATALE Antonio	5,5	0	5,5		A	TEVEZ Carlos	5,5	0	5,5
 				Parziale squadra	69,5					Parziale squadra	65
@@ -115,15 +115,15 @@
 	D	OGBONNA Angelo Obinze	sv/ng	0	sv/ng		D	COSTA Andrea	5,5	0	5,5
 	D	DEL GROSSO Cristiano	sv/ng	0	sv/ng		C	PEPE Simone	sv/ng	0	sv/ng
 	C	ACQUAH Afriyie	6,5	0	6,5		C	ONAZI Ogenyi Eddy	sv/ng	0	sv/ng
-	C	MISSIROLI Simone	5,5	0	5,5		A	GOMEZ Juan Ignacio	5,5	-0,5	5
-	C	HETEMAJ Perparim	5	0	5		A	BIANCHI Rolando	sv/ng	0	sv/ng
-	C	FARNERUD Alexander	5,5	0	5,5		A	BELFODIL Ishak	5,5	0	5,5
-	A	BERGESSIO Gonzalo	sv/ng	0	sv/ng		p	RAFAEL De Andrade Bittencourt Pinheiro	sv/ng	0	sv/ng
-	p	SOMMARIVA Daniele	sv/ng	0	sv/ng		p	UJKANI Samir	sv/ng	0	sv/ng
-	d	BARZAGLI Andrea	sv/ng	0	sv/ng		d	BALZANO Antonio	sv/ng	0	sv/ng
-	d	BRAAFHEID Edson	sv/ng	0	sv/ng		d	PELUSO Federico	sv/ng	0	sv/ng
-	c	CARMONA Carlos Emilio	sv/ng	0	sv/ng		c	LULIC Senad	sv/ng	0	sv/ng
-	a	PALLADINO Raffaele	5,5	0	5,5		c	SCHELOTTO Ezequiel Matias	5,5	0	5,5
+	C	MISSIROLI Simone	5,5	0	5,5		C	NOCERINO Antonio	5,5	0	5,5
+	C	HETEMAJ Perparim	5	0	5		A	GOMEZ Juan Ignacio	5,5	-0,5	5
+	C	FARNERUD Alexander	5,5	0	5,5		A	BIANCHI Rolando	sv/ng	0	sv/ng
+	A	BERGESSIO Gonzalo	sv/ng	0	sv/ng		A	BELFODIL Ishak	5,5	0	5,5
+	p	SOMMARIVA Daniele	sv/ng	0	sv/ng		p	RAFAEL De Andrade Bittencourt Pinheiro	sv/ng	0	sv/ng
+	d	BARZAGLI Andrea	sv/ng	0	sv/ng		p	UJKANI Samir	sv/ng	0	sv/ng
+	d	BRAAFHEID Edson	sv/ng	0	sv/ng		d	BALZANO Antonio	sv/ng	0	sv/ng
+	c	CARMONA Carlos Emilio	sv/ng	0	sv/ng		d	PELUSO Federico	sv/ng	0	sv/ng
+	a	PALLADINO Raffaele	5,5	0	5,5		c	LULIC Senad	sv/ng	0	sv/ng
 							a	GHEZZAL Abdel Kader	5,5	0	5,5
 											
 		Campionato: 22a Camp. (Ritorno)									

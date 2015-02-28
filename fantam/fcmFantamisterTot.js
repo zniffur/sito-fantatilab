@@ -1,8 +1,8 @@
 var arrFantamTot=new Array()
 a=arrFantamTot
 a[1]=new FmTot("Roca Junior",.690,22)
-a[2]=new FmTot("Amazzulu FC",.730,22)
-a[3]=new FmTot("River Cyccy",.730,22)
+a[2]=new FmTot("River Cyccy",.730,22)
+a[3]=new FmTot("Amazzulu FC",.750,22)
 a[4]=new FmTot("Caipirinha",.800,22)
 a[5]=new FmTot("Heroes de la Baja Jamon",.810,22)
 a[6]=new FmTot("Arte Della Topa",.840,22)
