@@ -1,5 +1,6 @@
 var arrFantamTot=new Array()
 a=arrFantamTot
+<<<<<<< HEAD
 a[1]=new FmTot("Amazzulu FC",.700,25)
 a[2]=new FmTot("River Cyccy",.710,25)
 a[3]=new FmTot("Roca Junior",.710,25)
@@ -14,3 +15,19 @@ a[11]=new FmTot("CamPaz",.980,25)
 a[12]=new FmTot("Atletico Gambineiro",1.16,25)
 a[13]=new FmTot("Augusta Romulea FC",1.48,25)
 a[14]=new FmTot("Pro Zniffur",1.57,25)
+=======
+a[1]=new FmTot("Roca Junior",.680,35)
+a[2]=new FmTot("Caipirinha",.770,35)
+a[3]=new FmTot("River Cyccy",.800,35)
+a[4]=new FmTot("Heroes de la Baja Jamon",.820,35)
+a[5]=new FmTot("Arte Della Topa",.850,35)
+a[6]=new FmTot("Amazzulu FC",.860,35)
+a[7]=new FmTot("Il Grande Bluff",.880,35)
+a[8]=new FmTot("Santos (do Bareira)",.910,35)
+a[9]=new FmTot("CamPaz",.940,35)
+a[10]=new FmTot("Atletico Carione",.950,35)
+a[11]=new FmTot("Celtic Panic",1.09,35)
+a[12]=new FmTot("Augusta Romulea FC",1.30,35)
+a[13]=new FmTot("Atletico Gambineiro",1.32,35)
+a[14]=new FmTot("Pro Zniffur",1.46,35)
+>>>>>>> f1e711f8a532ba7bbb58b3961749510ab8f1deb1

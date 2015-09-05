@@ -1,0 +1,679 @@
+/*stili per il layout elastico*/
+html,body{margin:0; padding:0;}
+body{font-family:arial,sans-serif; font-size:76%; text-align:center;}
+div#container{width:90%; margin:0 auto; margin-bottom:2em; text-align:left; border:2px solid #36c;}
+div#counter{text-align:center;}
+
+/*stili generici, su header e footer*/
+div#header{height:80px; background-color:#36c; color:#ff6;}
+div#header h1,h2{margin:0; padding:0;}
+div#header h1{padding-left:0.3em; font-family:"arial black",verdana,arial,sans-serif; font-weight:bold; font-size:3em; line-height:80px; font-stretch:condensed;}
+div#header h1 span{font-family:arial,sans-serif; font-size:30%; font-weight:normal; color:#fff;}
+a.white{color:#fff;}
+a.white:hover{color:#f00;}
+div#footer{text-align:center; padding:0.5em 2em; background-color:#69c; color:#000; font-size:8pt;}
+div#footer a{color:#fff; font-weight:bold; text-decoration:underline;}
+
+/*stili specifici per il layout*/
+div#navigation{background-color:#9cf;}
+div#content{padding:1em;}
+div#content h2.title{line-height:1.5em; border-bottom:1px solid #ccc; color:#069;}
+div.agg{overflow:auto; border:0; padding-left:0.5em; padding-top:0.5em; padding-bottom:0.5em}
+div.agg2{border:0; padding-top:0.5em; padding-bottom:0.5em;}
+div.agg3{overflow:auto; border:0; padding-left:0.5em; padding-right:0.5em; padding-top:0.5em;}
+div.cx{text-align:center;}
+table.contenuti div.dxcont{margin-left:2em; margin-bottom:2em;}
+p.rosso-cx{text-align:center; color:#f00; font-size:8pt; font-family:arial,serif;}
+
+/*stili per il menù*/
+/*div.newsbox{font-size:8pt; margin-bottom:0em;} */
+div.newsbox{margin-bottom:0em;}
+div.newsbox div{border:1px solid black; margin:0;}
+div.newsbox div.riq-pari{background-color:#9cf;}
+div.newsbox div.riq-dispari{background-color:#ffc;}
+div.newsbox h2{background:#036 url(img/sfu-blu.bmp) repeat bottom; color:#fff; font-size:1em; padding:2px; border:0px solid #000; text-align:center;}
+div.newsbox p{margin:0; padding:0 2px;}
+div.newsbox p.bold{font-weight:bold;}
+div.newsbox a{color:#036;}
+div.newsbox a:hover{color:#f00;}
+
+/*stili per la navigazione*/
+div#navigation ul{margin:0; padding:0; list-style-type:none;}
+div#navigation li{display:inline; margin:0 0 0 1em; padding:0;}
+div#navigation a{color:#369; font:normal bold 1em/2em arial,sans-serif; text-decoration:none;}
+div#navigation a:hover{color:#ff6; text-decoration:underline;}
+div#navigation a#activelink{color:#033; text-decoration:none;}
+
+/*stili specifici per i dati di fcm*/
+.cale-comp{background:url(img/sfu-orange.bmp) repeat bottom; color:#036; font-weight:bold; border-color:#036; border-width:1px; border-style:solid;}
+.cale-data{background:url(img/sfu-blu.bmp) repeat bottom; color:white; font-weight:bold; text-align:center; border-color:#036; border-width:1px; border-style:solid; border-left-width:0px;}
+.cale-gio{background:url(img/sfu-blu.bmp) repeat bottom; color:white; font-weight:bold; border-color:#036; border-width:1px; border-style:solid; border-right-width:0px;}
+.cale-inc-dispari{background:url(img/sfu-white.bmp) repeat bottom; border-color:#036; border-width:1px; border-style:solid; border-right-width:0px;}
+.cale-inc-pari{background-color:#9cf; border-color:#003366; border-width:1px; border-style:solid; border-right-width:0px;}
+.cale-ris-dispari{background:url(img/sfu-white.bmp) repeat bottom; border-color:#036; border-width:1px; border-style:solid; border-left-width:0px; font-weight:bold; text-align:center;}
+.cale-ris-pari{background-color:#9cf; border-color:#036; border-width:1px; border-style:solid; border-left-width:0px; font-weight:bold; text-align:center;}
+
+.cella-menu{background-color:#69c; font-family:Arial,sans-serif; font-size:8pt; font-weight:normal; text-align:left; padding-left:2px; padding-right:2px;}
+.cella-foot{background-color:#369; font-family:Arial,sans-serif; font-size:8pt; font-weight:normal; padding-left:2px; padding-right:2px; color:#cff;}
+
+.cella-ciano{background-color:#0066cc; color:white;}
+.cella-ciano-cx{background-color:#0066cc; color:white; text-align:center;}
+.cella-ciano-grigio{background-color:#0066cc; text-decoration:underline;}
+.cella-oliva{background-color:#999900; color:white;}
+.cella-oliva-cx{background-color:#999900; color:white; text-align:center;}
+.cella-oliva-grigio{background-color:#999900; text-decoration:underline;}
+.cella-rosso{background-color:#cc0000; color:white;}
+.cella-rosso-cx{background-color:#cc0000; color:white; text-align:center;}
+.cella-rosso-grigio{background-color:#cc0000; text-decoration:underline;}
+.cella-verde{background-color:#00cc00; color:white;}
+.cella-verde-cx{background-color:#00cc00; color:white; text-align:center;}
+.cella-verde-grigio{background-color:#00cc00; text-decoration:underline;}
+
+.intest-fc{font-family:Arial,sans-serif; font-size:10pt; font-weight:bold; color:#000000;}
+.intest-layer{background-image:url(img/sfu-orange.bmp); background-repeat:repeat-x; background-position:bottom; font-family:arial,sans-serif; font-size:1em; color:#00f; font-weight:bold; text-align:left; border:1px solid #036; padding:2px;}
+ 
+.riga-dispari{background:url(img/sfu-white.bmp) repeat bottom;}
+.riga-dispari-cx{background:url(img/sfu-white.bmp) repeat bottom; text-align:center;}
+.riga-dispari-grigio{background:url(img/sfu-white.bmp) repeat bottom; text-decoration:underline; color:#666;}
+.riga-dispari2{background:url(img/sfu-white2.bmp) repeat center;}
+.riga-pari{background-color:#9cf;}
+.riga-pari-cx{background-color:#9cf; text-align:center;}
+.riga-pari-grigio{background-color:#9cf; text-decoration:underline; color:#666;}
+
+.riga-bianco{font-size:8pt; background-color:white;}
+
+.riga-blu{background:url(img/sfu-blu.bmp) repeat bottom; color:white; font-weight:bold;}
+.riga-blu-cx{background:url(img/sfu-blu.bmp) repeat bottom; color:white; font-weight:bold; text-align:center;}
+.riga-blu-dx{background:url(img/sfu-blu.bmp) repeat bottom; color:white; font-weight:bold; text-align:right;}
+
+.riga-orange{background:url(img/sfu-orange.bmp) repeat bottom; color:#003366; font-weight:bold;}
+.riga-orange-cx{background:url(img/sfu-orange.bmp) repeat bottom; color:#036; font-weight:bold; text-align:center;}
+.riga-orange-dx{background:url(img/sfu-orange.bmp) repeat bottom; color:#036; font-weight:bold; text-align:right;}
+
+.simbolo-wing{font-family:Wingdings; font-size:26pt; font-weight:bold;}
+.sfondo-lavori{background-position:center; background-repeat:no-repeat;}
+
+.tab-8{border-color:#036; border-collapse:collapse; font-family:arial,sans-serif; font-size:8pt;}
+.tab-8bord{font-family:arial,sans-serif; font-size:8pt;}
+.tab-8 th.cx{text-align:center;}
+.tab-8 td.cx{text-align:center;}
+.tab-8if{border-color:#ccc; border-collapse:collapse; font-family:arial,sans-serif; font-size:8pt;}
+
+.testo-8{font-family:arial,sans-serif; font-size:8pt;}
+.testo-10{font-family:arial,sans-serif; font-size:10pt;}
+.testo-10-bold{font-family:arial,sans-serif; font-size:10pt; font-weight:bold;}
+
+.testo-sx{text-align:left;}
+.testo-cx{text-align:center;}
+.testo-dx{text-align:right;}
+
+.testo-bold{font-weight:bold;}
+.testo-bold-cx{font-weight:bold; text-align:center;}
+.testo-bold-dx{font-weight:bold; text-align:right;}
+
+.testo-bianco{color:white;}
+
+.testo-blu{color:blue;}
+.testo-blu-cx{color:blue; text-align:center;}
+.testo-blu-bold{color:blue; font-weight:bold;}
+.testo-blu-bold-cx{color:blue; font-weight:bold; text-align:center;}
+
+.testo-oliva{color:#999900;}
+.testo-oliva-cx{color:#999900; text-align:center;}
+.testo-oliva-bold{color:#999900; font-weight:bold;}
+.testo-oliva-bold-cx{color:#999900; font-weight:bold; text-align:center;}
+
+.testo-rosso{color:#990000;}
+.testo-rosso-cx{color:#990000; text-align:center;}
+.testo-rosso-bold{color:#990000; font-weight:bold;}
+.testo-rosso-bold-cx{color:#990000; font-weight:bold; text-align:center;}
+
+.testo-verde{color:#009900;}
+.testo-verde-cx{color:#009900; text-align:center;}
+.testo-verde-bold{color:#009900; font-weight:bold;}
+.testo-verde-bold-cx{color:#009900; font-weight:bold; text-align:center;}
+
+.titolo3n{font-family:Arial,sans-serif; font-size:26pt; font-weight:bold; color:#ffffff; text-align:center; background-image:url(img/sfu-blufusion2.bmp); background-repeat:repeat-x; background-position:bottom;}
+.titolo-menu{font-family:Arial,sans-serif; font-size:8pt; font-weight:bold; color:#ffffff; text-align:center; background-image:url(img/sfu-blufusion.bmp); background-repeat:repeat-x; background-position:bottom;}
+
+.tmodI{font-style:italic;}
+.tmodB{font-weight:bold;}
+.tmodBI{font-style:italic; font-weight: bold;}
+.tmodU{text-decoration:underline;}
+.tmodIU{font-style:italic; text-decoration:underline;}
+.tmodBU{font-weight:bold; text-decoration:underline;}
+.tmodBIU{font-style:italic; font-weight:bold; text-decoration:underline;}
+
+/*stili per invio formazione*/
+.t-xxs {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	color: #000000;
+}
+
+.t-xxsB {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	font-weight: bold;
+	color: #000000;
+}
+
+.t-s {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: small;
+}
+.t-m {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: medium;
+	color: #000000;
+}
+.t-l {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: large;
+}
+.IntRossoBlu {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: x-small;
+	color: #990000;
+	font-weight: bold;
+	border: 1px solid #0033FF;
+	text-align: center;
+	background: url(img/sfuBlu.gif) repeat-x center center;
+
+
+}
+.t-xxsV {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	color: #009900;
+
+}
+.t-xxsR {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	color: #CC0000;
+}
+.t-xxsVB {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	color: #009900;
+	font-weight: bold;
+
+
+}
+.t-xxsRB {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	color: #CC0000;
+	font-weight: bold;
+
+}
+.t-xxsG {
+
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	color: #999900;
+}
+.t-xxsGB {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	color: #999900;
+	font-weight: bold;
+
+
+}
+.ClassP {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	border: 1px solid #0033FF;
+	background-image: url(img/sfuP.gif);
+	background-repeat: repeat-x;
+	background-position: center;
+
+
+
+
+}
+.ClassD {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	border: 1px solid #0033FF;
+	background-image: url(img/sfuD.gif);
+	background-repeat: repeat-x;
+	background-position: center;
+}
+
+.ClassEl {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	border: 1px solid #0033FF;
+
+}
+.ClassBianco {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	background-color: #FFFFFF;
+	border: 1px solid #0033FF;
+}
+table {
+	border-collapse: collapse;
+}
+.Cella {
+	border: 1px solid #0033FF;
+}
+.t-xxsBluB {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	color: #3300FF;
+	font-weight: bold;
+}
+.t-xxsBlu {
+
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	color: #3300FF;
+	font-weight: normal;
+}
+.CellaCentro {
+	border: 1px solid #0033FF;
+	text-align: center;
+
+}
+.RosaP {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	background-color: #cccccc;
+	border: 1px solid #0033FF;
+	background-image: url(img/sfuP.gif);
+	background-repeat: repeat;
+	background-position: center;
+}
+.RosaD {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	background-color: #eeeeee;
+	border: 1px solid #0033FF;
+	background-image: url(img/sfuD.gif);
+	background-repeat: repeat;
+	background-position: center;
+}
+body {
+	margin: 0px;
+}
+.IntBluGiallo {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: x-small;
+	color: #0000FF;
+	font-weight: bold;
+	border: 1px solid #0033FF;
+	text-align: center;
+	background: url(img/sfuGiallo.gif) repeat-x center center;
+}
+.IntRossoBluDx {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: x-small;
+	color: #990000;
+	font-weight: bold;
+	border: 1px solid #0033FF;
+	text-align: right;
+	background: url(img/sfuBlu.gif) repeat-x center center;
+}
+.GiornataForm {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	color: #000099;
+	font-weight: bold;
+}
+.CompetizioneForm {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	font-weight: bold;
+	color: #990000;
+}
+.IntLayer {
+
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: small;
+	color: #0000FF;
+	font-weight: bold;
+	border: 1px solid #0033FF;
+	text-align: left;
+	background: url(img/sfuGiallo.gif) repeat-x center center;
+}
+.FormP {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	background-color: #cccccc;
+	border: 1px solid #0033FF;
+	background-image: url(img/sfuP2.gif);
+	background-repeat: repeat;
+	background-position: center;
+	text-align: left;
+}
+.FormD {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	background-color: #eeeeee;
+	border: 1px solid #0033FF;
+	background-image: url(img/sfuD2.gif);
+	background-repeat: repeat;
+	background-position: center;
+	text-align: left;
+}
+.FormNome {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: medium;
+	font-style: italic;
+	font-weight: bold;
+	border: 1px #0033FF;
+}
+
+.RisP {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	background-color: #cccccc;
+	border: 1px solid #0033FF;
+	background-image: url(img/sfuP.gif);
+	background-repeat: repeat;
+	background-position: center;
+	text-align: left;
+}
+
+.RisD {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	background-color: #eeeeee;
+	border: 1px solid #0033FF;
+	background-image: url(img/sfuD.gif);
+	background-repeat: repeat;
+	background-position: center;
+	text-align: left;
+}
+.RisNome {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: medium;
+	font-style: italic;
+	font-weight: bold;
+	border: 1px #0033FF;
+}
+.CellaImg {
+	text-align: center;
+	vertical-align: middle;
+	background: center center;
+}
+.Bianco {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background: #FFFFFF url(none);
+	border-top: 1px solid #0033FF;
+	border-right: 1px none #0033FF;
+	border-bottom: 1px solid #0033FF;
+	border-left: 1px none #0033FF;
+	font-size: xx-small;
+}
+.FormPCentro {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	background-color: #cccccc;
+	border: 1px solid #0033FF;
+	background-image: url(img/sfuP2.gif);
+	background-repeat: repeat;
+	background-position: center;
+	text-align: center;
+}
+.FormDCentro {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	background-color: #eeeeee;
+	border: 1px solid #0033FF;
+	background-image: url(img/sfuD2.gif);
+	background-repeat: repeat;
+	background-position: center;
+	text-align: center;
+}
+
+.RisPCentro {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	background-color: #cccccc;
+	border: 1px solid #0033FF;
+	background-image: url(img/sfuP2.gif);
+	background-repeat: repeat;
+	background-position: center;
+	text-align: center;
+}
+
+.RisDCentro {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	background-color: #eeeeee;
+	border: 1px solid #0033FF;
+	background-image: url(img/sfuD2.gif);
+	background-repeat: repeat;
+	background-position: center;
+	text-align: center;
+}
+.CellaDestra {
+
+	border: 1px solid #0033FF;
+	text-align: right;
+}
+.t-xsB {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: x-small;
+	font-weight: bold;
+}
+.CellaCentroRosso {
+	border: 1px solid #0033FF;
+	text-align: center;
+	background-color:#FF0000
+
+}
+.t-xsWB {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: x-small;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.CellaCentroVerde {
+
+	border: 1px solid #0033FF;
+	text-align: center;
+	background-color:#00CC00
+}
+.CellaNoBordo {
+
+	border: none;
+}
+.CellaNoBordoDx {
+	border: none;
+	text-align: right;
+}
+.t-xxsI {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	font-style: italic;
+}
+.RvP {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	background-color: #cccccc;
+	border: 1px solid #0033FF;
+	background-image: url(img/sfuP.gif);
+	background-repeat: repeat;
+	background-position: center;
+	text-align: left;
+}
+.RvD {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	background-color: #eeeeee;
+	border: 1px solid #0033FF;
+	background-image: url(img/sfuD.gif);
+	background-repeat: repeat;
+	background-position: center;
+	text-align: left;
+}
+.CellaRvCiano {
+	border: 1px solid #0033FF;
+	background: #0359DA;
+	color: #FFFFFF;
+}
+.CellaRvRosso {
+	border: 1px solid #0033FF;
+	background: #DD0000;
+	color: #FFFFFF;
+}
+.CellaRvVerde {
+	border: 1px solid #0033FF;
+	background: #00A800;
+	color: #FFFFFF;
+}
+.CellaRvGiallo {
+	border: 1px solid #0033FF;
+	background: #B5B500;
+	color: #FFFFFF;
+}
+.tmodI {
+	font-style: italic;
+}
+.tmodB {
+	font-weight: bold;
+}
+.tmodBI {
+	font-style: italic;
+	font-weight: bold;
+}
+.tmodU {
+	text-decoration: underline;
+}
+.tmodIU {
+	font-style: italic;
+	text-decoration: underline;
+}
+.tmodBU {
+	font-weight: bold;
+	text-decoration: underline;
+}
+.tmodBIU {
+	font-style: italic;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.CellaRvCianoCentro {
+	border: 1px solid #0033FF;
+	background: #0359DA;
+	color: #FFFFFF;
+	text-align: center;
+}
+.CellaRvRossoCentro {
+
+	border: 1px solid #0033FF;
+	background: #DD0000;
+	color: #FFFFFF;
+	text-align: center;
+}
+.CellaRvVerdeCentro {
+
+	border: 1px solid #0033FF;
+	background: #00A800;
+	color: #FFFFFF;
+	text-align: center;
+}
+.CellaRvGialloCentro {
+
+	border: 1px solid #0033FF;
+	background: #B5B500;
+	color: #FFFFFF;
+	text-align: center;
+}
+.RvPCentro {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	background-color: #cccccc;
+	border: 1px solid #0033FF;
+	background-image: url(img/sfuP.gif);
+	background-repeat: repeat;
+	background-position: center;
+	text-align: center;
+}
+.RvDCentro {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	background-color: #eeeeee;
+	border: 1px solid #0033FF;
+	background-image: url(img/sfuD.gif);
+	background-repeat: repeat;
+	background-position: center;
+	text-align: center;
+}
+
+.Stile1 {font-family: Verdana, Lucida, helvetica, arial, sans-serif}
+.Stile2 {color: #e9f2fc}
+.CellaRvCianoGrigio {
+
+	border: 1px solid #0033FF;
+	background: #0359DA;
+	color: #CCCCCC;
+}
+.CellaRvRossoGrigio {
+
+	border: 1px solid #0033FF;
+	background: #DD0000;
+	color: #CCCCCC;
+}
+.CellaRvVerdeGrigio {
+
+	border: 1px solid #0033FF;
+	background: #00A800;
+	color: #CCCCCC;
+}
+.CellaRvGialloGrigio {
+
+	border: 1px solid #0033FF;
+	background: #B5B500;
+	color: #CCCCCC;
+}
+.RvPGrigio {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	background-color: #cccccc;
+	border: 1px solid #0033FF;
+	background-image: url(img/sfuP.gif);
+	background-repeat: repeat;
+	background-position: center;
+	text-align: left;
+	color: #666666;
+}
+.RvDGrigio {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	background-color: #eeeeee;
+	border: 1px solid #0033FF;
+	background-image: url(img/sfuD.gif);
+	background-repeat: repeat;
+	background-position: center;
+	text-align: left;
+	color: #666666;
+}
+
+div.nooverflow{overflow:auto; border:1px solid #000}
+
+.tableBoxOuter {
+	width:100%;
+	height:29em;
+}

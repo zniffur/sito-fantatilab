@@ -1,5 +1,6 @@
 var arrTop11=new Array()
 a = arrTop11
+<<<<<<< HEAD
 a[1]=new T11("P","BIZZARRI Alb","Atletico Gambineiro",7)
 a[2]=new T11("D","DE SILVESTRI Lor","CamPaz",10)
 a[3]=new T11("D","RODRIGUEZ Gon","Arte Della Topa",9.5)
@@ -11,3 +12,16 @@ a[8]=new T11("C","VECINO Mat","Arte Della Topa",9)
 a[9]=new T11("A","SANSONE Nic","Atletico Carione",15)
 a[10]=new T11("A","PALOSCHI Alb","Amazzulu FC",14)
 a[11]=new T11("A","TONI Luc","Amazzulu FC",13.5)
+=======
+a[1]=new T11("P","TATARUSANU Cip","Il Grande Bluff",6)
+a[2]=new T11("D","MORETTI Emi","Augusta Romulea FC",10.5)
+a[3]=new T11("D","ROMAGNOLI Ale","Atletico Carione",9.5)
+a[4]=new T11("D","DE SILVESTRI Lor","CamPaz",9.5)
+a[5]=new T11("C","BONAVENTURA Gia","Amazzulu FC",13)
+a[6]=new T11("C","VAZQUEZ Fra","Roca Junior",11)
+a[7]=new T11("C","PEREYRA Rob","CamPaz",10.5)
+a[8]=new T11("C","PUCCIARELLI Man","Heroes de la Baja Jamon",10.5)
+a[9]=new T11("A","ICARDI Mau","Santos (do Bareira)",14.5)
+a[10]=new T11("A","ZAZA Sim","Santos (do Bareira)",10.5)
+a[11]=new T11("A","MARTINEZ Jos","Il Grande Bluff",10.5)
+>>>>>>> f1e711f8a532ba7bbb58b3961749510ab8f1deb1
