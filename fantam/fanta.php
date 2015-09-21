@@ -33,33 +33,33 @@
 <title>Statistiche Fantamister</title><meta name='author' content='tp'>
 <link href='fantamister.css' rel='stylesheet' type='text/css'>
 </head><body><h2 class='intest'>Statistiche di Squadra</h2>
-<div id='sq1H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq1')"><font class='intest2'>River Cyccy</font></a></div>
+<div id='sq1H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq1')"><font class='intest2'>Roca Junior</font></a></div>
 <div id='sq1' style='display: none;' align='center'><? include ('sq1.htm') ?></div>
-<div id='sq2H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq2')"><font class='intest2'>Roca Junior</font></a></div>
+<div id='sq2H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq2')"><font class='intest2'>Guffinz SPA</font></a></div>
 <div id='sq2' style='display: none;' align='center'><? include ('sq2.htm') ?></div>
-<div id='sq3H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq3')"><font class='intest2'>Il Grande Bluff</font></a></div>
+<div id='sq3H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq3')"><font class='intest2'>Santos (do Bareira)</font></a></div>
 <div id='sq3' style='display: none;' align='center'><? include ('sq3.htm') ?></div>
-<div id='sq4H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq4')"><font class='intest2'>Amazzulu FC</font></a></div>
+<div id='sq4H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq4')"><font class='intest2'>Il Ciuccio FC</font></a></div>
 <div id='sq4' style='display: none;' align='center'><? include ('sq4.htm') ?></div>
-<div id='sq5H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq5')"><font class='intest2'>Caipirinha</font></a></div>
+<div id='sq5H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq5')"><font class='intest2'>Arte Della Topa</font></a></div>
 <div id='sq5' style='display: none;' align='center'><? include ('sq5.htm') ?></div>
-<div id='sq6H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq6')"><font class='intest2'>Heroes de la Baja Jamon</font></a></div>
+<div id='sq6H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq6')"><font class='intest2'>Augusta Romulea FC</font></a></div>
 <div id='sq6' style='display: none;' align='center'><? include ('sq6.htm') ?></div>
-<div id='sq7H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq7')"><font class='intest2'>Santos (do Bareira)</font></a></div>
+<div id='sq7H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq7')"><font class='intest2'>Atletico Caipirinha</font></a></div>
 <div id='sq7' style='display: none;' align='center'><? include ('sq7.htm') ?></div>
-<div id='sq8H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq8')"><font class='intest2'>Arte Della Topa</font></a></div>
+<div id='sq8H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq8')"><font class='intest2'>Zunin San Peterione</font></a></div>
 <div id='sq8' style='display: none;' align='center'><? include ('sq8.htm') ?></div>
-<div id='sq9H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq9')"><font class='intest2'>Atletico Carione</font></a></div>
+<div id='sq9H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq9')"><font class='intest2'>SmallAzz</font></a></div>
 <div id='sq9' style='display: none;' align='center'><? include ('sq9.htm') ?></div>
-<div id='sq10H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq10')"><font class='intest2'>Atletico Gambineiro</font></a></div>
+<div id='sq10H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq10')"><font class='intest2'>Xeltic Panic</font></a></div>
 <div id='sq10' style='display: none;' align='center'><? include ('sq10.htm') ?></div>
-<div id='sq11H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq11')"><font class='intest2'>Augusta Romulea FC</font></a></div>
+<div id='sq11H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq11')"><font class='intest2'>Cioppese</font></a></div>
 <div id='sq11' style='display: none;' align='center'><? include ('sq11.htm') ?></div>
-<div id='sq12H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq12')"><font class='intest2'>CamPaz</font></a></div>
+<div id='sq12H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq12')"><font class='intest2'>Heroes de la Baja Jamon</font></a></div>
 <div id='sq12' style='display: none;' align='center'><? include ('sq12.htm') ?></div>
-<div id='sq13H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq13')"><font class='intest2'>Celtic Panic</font></a></div>
+<div id='sq13H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq13')"><font class='intest2'>River Cyccy</font></a></div>
 <div id='sq13' style='display: none;' align='center'><? include ('sq13.htm') ?></div>
-<div id='sq14H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq14')"><font class='intest2'>Pro Zniffur</font></a></div>
+<div id='sq14H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq14')"><font class='intest2'>Plineiras</font></a></div>
 <div id='sq14' style='display: none;' align='center'><? include ('sq14.htm') ?></div>
 <br><center><font class='cpr'>Powered by </font><font class='cpr2'>tp</font></center>
 </body></html>
