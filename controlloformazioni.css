@@ -1,0 +1,70 @@
+/*Testata della tabella*/
+.TestaTab {
+	font-family: calibri;
+	background-color: #4169E1;
+	color: white;
+	border: thin solid Black;
+}
+.r1 { 
+	background-color: #ffff99;
+	font-family: Calibri;
+	color: #0000cc;
+	border: thin solid Black;
+}
+.r2 {
+	background-color: #fffff0;
+	font-family: Calibri;
+	color: #0000cc;
+	border: thin solid Black;
+}
+.r3{
+	font-family: calibri;
+	background-color: #FFFFE0;
+	color: black;
+	border: thin solid Black;
+	font-size: smaller;
+}
+/*Riga Rossa*/
+.r4{
+	font-family: calibri;
+	background-color: Red;
+	color: black;
+	border: thin solid Black;
+}
+a.rl4:link{
+	font-family: calibri;
+	font-size: x-small;
+	background-color: transparent;
+	color: black;
+	text-decoration: none;
+}
+
+a.rl4:visited {
+	font-family: calibri;
+	font-size: x-small;
+	background-color: transparent;
+	color: black;
+	text-decoration: none;
+}
+
+.r5{
+	font-family: calibri;
+	background-color: Green;
+	color: black;
+	border: thin solid Black;
+}
+a.rl5:link{
+	font-family: calibri;
+	font-size: x-small;
+	background-color: transparent;
+	color: black;
+	text-decoration: none;
+}
+
+a.rl5:visited {
+	font-family: calibri;
+	font-size: x-small;
+	background-color: transparent;
+	color: black;
+	text-decoration: none;
+}

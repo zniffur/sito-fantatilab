@@ -286,7 +286,7 @@ var i,j,pd,colore,ruolo,inseritariga=0,riga=1
 	tabe.SetLarghezzaColonna(1,5)
 	tabe.SetLarghezzaColonna(2,95)
 	for (j=1;j<f.length;j++) {
-	   if (j<19){
+	   if (j<24){
 		riga=1+j+inseritariga
 		if ((riga % 2) == 0) {
 			pd="D"

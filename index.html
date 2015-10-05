@@ -14,6 +14,8 @@
 
   
   <link href="highblue.css" rel="stylesheet" type="text/css">
+  <link href="controlloformazioni.css" rel="stylesheet" type="text/css">
+  
   <style type="text/css">
     pre {
         white-space: pre-wrap;       /* CSS 3 */
@@ -35,10 +37,10 @@
   <script src="js/fcmSerieAFunzioni.js" type="text/javascript"></script>
   <script src="js/fcmSerieADati.js" type="text/javascript"></script>
   <script src="js/fcmTabelle.js" type="text/javascript"></script>
-  <!-- <script src="js/fcmFantasquadreFunzioni.js" type="text/javascript"></script> -->
-  <!-- <script src="js/fcmFantasquadreDati.js" type="text/javascript"></script> -->
-  <!-- <script src="js/fcmCompetizioniFunzioni.js" type="text/javascript"></script> -->
-  <!-- <script src="js/fcmCompetizioniDati.js" type="text/javascript"></script> -->
+  <script src="js/fcmFantasquadreFunzioni.js" type="text/javascript"></script>
+  <script src="js/fcmFantasquadreDati.js" type="text/javascript"></script>
+  <script src="js/fcmCompetizioniFunzioni.js" type="text/javascript"></script>
+  <script src="js/fcmCompetizioniDati.js" type="text/javascript"></script>
   <script src="js/fcmCalendarioFunzioni.js" type="text/javascript"></script>
   <script src="js/fcmCalendarioDati.js" type="text/javascript"></script>
   <script src="js/fcmClassificaFunzioni.js" type="text/javascript"></script>
@@ -47,7 +49,13 @@
   <!-- <script src="formazione/giornate.js" type="text/javascript"></script> -->
   <script src="js/fcmVariabiliJdPI.js" type="text/javascript"></script>
   <script src="menujs/dataA.js" type="text/javascript"></script>
+
+  <script language="javascript" type="text/javascript">
+	document.write("<script src='js/fcmFormazioniDati"+GetProssimaGiornataDaGiocare()+".js' type='text/javascript'></scr" + "ipt>")
+  </script> 
   
+  <script src="js/fcmControlloFormFunzioni.js" type="text/javascript"></script>
+
   
 		<script type="text/javascript" language="JavaScript">
 			<!-- Copyright 2002 Bontrager Connection, LLC
@@ -193,7 +201,101 @@
      <h2 class="title">Il commento dell'ultima giornata</h2>
 		<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
 		<p style="margin-top: 0; margin-bottom: 0">
-      <pre style="font-size: 12px">
+		<pre style="font-size: 12px">
+
+Meno male che c'è la 
+ _______  _______  __   __  _______  _______           
+|       ||   _   ||  | |  ||       ||   _   |          
+|    _  ||  |_|  ||  | |  ||  _____||  |_|  |          
+|   |_| ||       ||  |_|  || |_____ |       |          
+|    ___||       ||       ||_____  ||       |          
+|   |    |   _   ||       | _____| ||   _   |          
+|___|    |__| |__||_______||_______||__| |__|          
+ _______  ______    _______  __    _  _______  _______ 
+|       ||    _ |  |   _   ||  |  | ||       ||       |
+|    _  ||   | ||  |  |_|  ||   |_| ||____   ||   _   |
+|   |_| ||   |_||_ |       ||       | ____|  ||  | |  |
+|    ___||    __  ||       ||  _    || ______||  |_|  |
+|   |    |   |  | ||   _   || | |   || |_____ |       |
+|___|    |___|  |_||__| |__||_|  |__||_______||_______|
+
+I Guffinz sono momentaneamente assenti. 
+Sono stati avvistati in tangenziale a Napoli, in due su un motorino, che stavano cercando l'uscita di Posillipo....
+Nel frattempo, in Piazza Plebiscito, concerto di Peppitez "Accussìiiiiii, tu te ne vaiiiiiiiiiie"
+
+Si segnalano:
+
+- nubifragi e esondazioni sia a Roca che a Genova. Alla fine si salva Genova, che, ricordiamolo, è Repubblica Marinara e Roca è sommersa 1-0
+
+- il campione in carica si ricorda delle sue origini, recupera un briciolo di senno, ri-schiera il modulo Big-L e... vince 3-0. Tutto frutto di una strategia lungamente provata in allenamento.
+
+- Allan (che Burak vorrebbe avere scoperto lui, ma purtroppo l'ha scoperto Massi) non basta: uno scialbissimo 0-0 privo di emozioni fra due squadre ancora in cerca di identità
+
+- In tangenziale a Napoli c'era anche Insigne su un altro motorino rubato (lo stava portando a Massi per la figlia). Non è bastato il suo 15.5 a Massi per vincere contro Cyccy, ormai ufficialmente in rimonta.
+
+- 3 h e 45 di fatica e sudore e lacrime e 3 gol da SmallAzz.... che week end per Tony !!
+
+- 70.5 a 70.5 è più K o più K^-1 ? ? Questo interrogativo avvincente ci terrà a discutere per settim.....zzzzz ronf...zzzzz ronf....
+
+Zniff
+p.s. arrivederci al 17/10
+
+		</pre>
+<!--
+
+Sulla musica di 'Grazie Roma' 
+
+ _______  _______  _______  _______ _________ _______    _        _______  _______  _______ 
+(  ____ \(  ____ )(  ___  )/ ___   )\__   __/(  ____ \  ( \      (  ____ \(  ____ \(  ___  )
+| (    \/| (    )|| (   ) |\/   )  |   ) (   | (    \/  | (      | (    \/| (    \/| (   ) |
+| |      | (____)|| (___) |    /   )   | |   | (__      | |      | (__    | |      | (___) |
+| | ____ |     __)|  ___  |   /   /    | |   |  __)     | |      |  __)   | | ____ |  ___  |
+| | \_  )| (\ (   | (   ) |  /   /     | |   | (        | |      | (      | | \_  )| (   ) |
+| (___) || ) \ \__| )   ( | /   (_/\___) (___| (____/\  | (____/\| (____/\| (___) || )   ( |
+(_______)|/   \__/|/     \|(_______/\_______/(_______/  (_______/(_______/(_______)|/     \|
+                                                                                            
+che assegni il gol a Pepe e non a Paloschiiiiiiiiiii
+grazie lega grazie leeeeeegaaaaaaaaaa
+
+- Guffinz raggiunti da Peppitez-l-asfaltatrice a 10 punti
+- Pareggio inguardabile fra Celtico e Santos, con punteggi che manco Zniffur delle annate migliori
+- pareggio fra Ciop (aka mister-calendar) e fuPres, che dalla prossima giornata comincia a salire
+- Pareggio inguardabile per Plin contro Giova (65.5)
+- Grande Trio che asfalta ex-champ (grazie a Matos by Guffinz)
+- Grande Ione che asfalta Smallazz con la tripletta del probabile-vincitore-del-premio-Burak-2015
+
+Zniff
+
+
+Presidente occupato, commento stringato.
+
+                                 _ _    __                   
+                                | (_)  / _|                  
+  _ __  _ __ _____   _____    __| |_  | |_ _   _  __ _  __ _ 
+ | '_ \| '__/ _ \ \ / / _ \  / _` | | |  _| | | |/ _` |/ _` |
+ | |_) | | | (_) \ V /  __/ | (_| | | | | | |_| | (_| | (_| |
+ | .__/|_|  \___/ \_/ \___|  \__,_|_| |_|  \__,_|\__, |\__,_|
+ | |                                              __/ |      
+ |_|                                             |___/       
+
+
+Giornata triste, tanti 0, tanti 1.
+- Un 1-0 che conta, quello di Guffinz contro il Trio, che si permettono di lasciare in tribuna l'ottimo Toloi. 
+E potremmo anche chiudere qui, ma visto che sono il presidente, mi tocca commentare anche le partite minori.
+
+- 0-0 fra ArTopaz e Plin per la conferma a centroclassifica, Roca e SmallAzz per la conferma in fondo classifica
+- 1-1 fra Santos-Peppe (sfida scudetto) e Cyccy-KallaK (sfida scudetto)
+- 0-1 fra Giova e Cioppese
+- roboante 3-2 fra Ione e Xeltico. Ione si conferma peggior difesa, ma oggi gli segna anche la babysitter di Achille
+
+Guffinz a +2 su Peppitez, seguono Xeltico e Carmine, si sgranano tutti gli altri.
+
+Saluti e domani altro giro.
+
+Zniff
+
+
+
 
 Amiiiiiiiiiiiicccccciiiiiiiiiiiiiiiii che bello questo gioco!!!!!!
 
@@ -232,9 +334,9 @@ Vi ricordo che **domani** c'è il turno infrasettimanale
 
 Ossequi
 Zniff
-	  
-	  	</pre>
-<!--
+
+
+
 Amiiiiiiiiiiiicccccciiiiiiiiiiiiiiiii si riparteeeeeeeeee.
 
 BabaUm-pa  BabaUm-pa BabaUm-pa BabaUm-pa !
@@ -269,9 +371,8 @@ Zniff
  -->
  <!-- FINE FUNZIONE TEMPO REALE GAZZETTA DELLO SPORT -->
 	<table border="1" width="180" cellspacing="0" cellpadding="0" id="table3">
-	<tr>
-	 
 	<!-- INIZIO FUNZIONE FOTO DEL GIORNO -->
+	<tr>
 		<td>
 		<div class="newsbox">
         	<h2>.: La foto del giorno :.</h2></div>
@@ -289,13 +390,29 @@ Zniff
     -->
 		</td>
 	</tr>
+<!-- FINE FUNZIONE FOTO DEL GIORNO -->	
+
+<!-- controllo invio formazione -->
+	<tr> 
+	<td>
+		<div class="newsbox">
+        	<h2>.: Controllo FRMZ :.</h2>
+		</div>
+	</td>
+	</tr>
+	<tr>
+	<td>
+		<p align="center">
+		<script language="javascript" type="text/javascript">ControllaFormazioniDate()</script>
+	</td>
+	</tr>
+	
 	</table>
     </td>
-<!-- FINE FUNZIONE FOTO DEL GIORNO -->
+
      <tr>
 
-
-<td valign="top" width="180" height="100%" style="border-right-style: none; border-right-width: medium">
+	<td valign="top" width="180" height="100%" style="border-right-style: none; border-right-width: medium">
       &nbsp;</td>
 
 
