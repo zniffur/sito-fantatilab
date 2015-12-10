@@ -1,58 +1,19 @@
-
-
 <?php 
 
 // require_once 'simple_html_dom.php';
 require_once 'url_to_absolute.php';
+require_once 'auto_login_2.php';
 
+$login_url = "http://www.fantagazzetta.com/";
+$url = "http://www.fantagazzetta.com/voti-fantagazzetta-serie-A";
+$post_data = "__EVENTTARGET=&__EVENTARGUMENT=&__VIEWSTATE=%2FwEPDwUIMjgxMzU3NjdkGAEFSmN0bDAwJEhlYWRlck1hc3RlclBhZ2VLbm9iJFJlZ2lzdHJhemlvbmUxJE9wZW5BdXRoUHJvdmlkZXJzMSRwcm92aWRlcnNMaXN0DxQrAA5kZGRkZGRkFCsAAWQCAWRkZGYC%2F%2F%2F%2F%2Fw9kqs%2Bx9ktCq0IAe8gJ4IiLPJNmVEw%3D&__VIEWSTATEGENERATOR=8D0E13E6&__EVENTVALIDATION=%2FwEdAAcMm7hjVdh5a9Y%2FTwJYDocm5126SdI5cH%2FexPLifNENm2hKE0VpzwjgoRGZQ8MF%2FamKKzao9vFcme%2BNmQ0yf2tWGV58mExs2H6p%2FqKf4qu9Jrz8DPGBlZ4hfV7pAI%2F%2FL%2BL0Txe3QmN96w1lx2aicDsj6KHa9bYh6lS00UHc0aVnUFwbrBY%3D&ctl00%24HeaderMasterPageKnob%24LoginMasterKnob%24TextBoxUserName=pbranigade&ctl00%24HeaderMasterPageKnob%24LoginMasterKnob%24TextBoxPassword=1234abcd&ctl00%24HeaderMasterPageKnob%24LoginMasterKnob%24ButtonSubmit=Login&ctl00%24ContentPlaceHolder1%24CercaHome1%24TextBoxSearch=";
 
-function get_page($url)
-{
-	$ch = curl_init();
-	$timeout = 5;
-	curl_setopt($ch, CURLOPT_URL, $url);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-	$html = curl_exec($ch);
-	curl_close($ch);
-	return $html;
-}
+login($login_url, $post_data);
 
-$url = "http://www.fantagazzetta.com";
-$html = get_page($url);
+$html = grab_page($url);
 
-# Create a DOM parser object
 $dom = new DOMDocument();
 
-# Parse the HTML.
-# The @ before the method call suppresses any warnings that
-# loadHTML might throw because of invalid HTML in the page.
-@$dom->loadHTML($html);
-
-// Empty array to hold all links to return
-$links = array();
-
-$pattern = '/voti-fanta/';
-
-# Iterate over all the <a> tags
-foreach($dom->getElementsByTagName('a') as $link) {
-    $links[] = array('url' => $link->getAttribute('href'), 'text' => $link->nodeValue);
-    # Show the <a href>
-    $l = $link->getAttribute('href');
-    if (preg_match($pattern, $l ,$matches)) {
-		// print_r($matches);
-		$link_voti = url_to_absolute($url, $l);
-		// echo $link_voti;
-    	// echo "< THIS IS A MATCH !!br />";
-    }
-}
-
-// echo $links[26]['url'];
-
-# retrieve voti page
-$url = $link_voti;
-$html = get_page($url);
-$dom = new DOMDocument();
 @$dom->loadHTML($html);
 
 #print all players names
@@ -102,7 +63,7 @@ foreach ($player_names as $container) {
 //     echo $l,"<br />";
 // }
 
-echo "<br>SIMO<br>";
+echo "<br>-- by Zniff --<br>";
 
 ?>
 
