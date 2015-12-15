@@ -40,7 +40,7 @@ function get_all_stats_from_fg() {
 			foreach ($names as $name) { //only one
 				// Nome
 				// echo $name->nodeValue." ";
-				$nome = $name->nodeValue; ##
+				$nome = strtoupper($name->nodeValue); ##
 				// Voto
 				$voto = $name->nextSibling;
 				// echo $voto->nodeValue." ";
@@ -91,8 +91,8 @@ function get_all_stats_from_fg() {
 			}
 
 			// # assist
-			$assists = $xpath->query('td[@class="af1"]', $player);
-			$numAssist = $assists->item(0)->nodeValue;
+			$assists = $xpath->query('td[@class="a green "]', $player);
+			$numAssist = $assists->item(1)->nodeValue;
 			if ($numAssist > 0) {
 				//echo "Assist: ".$numAssist;
 				//echo " ".$numAssist;
@@ -120,7 +120,8 @@ header('Content-type: text/javascript');
 
 $json = array(
 	'success' => false,
-	'result' => ""
+	'result' => "",
+	'riserve' => ""
 );
 
 if(isset($_POST['frmz'],$_POST['fSquadra'])){
@@ -135,28 +136,38 @@ if(isset($_POST['frmz'],$_POST['fSquadra'])){
 	// 	'fSquadra' => $sq
 	// 	);
 	$result = array();
+	$riserve = array();
 
-	// for ($i=1; $i < count($obj); $i++) { 
-	// 	if ($obj[$i]->{'IDSquadra'} == $sq && $obj[$i]->{'Pos'} >= 0) {
-	// 		$result[$obj[$i]->{'Nome'}] = $obj[$i]->{'Pos'};
-	// 	}
-	// }
+	for ($i=1; $i < count($obj); $i++) { 
+		if ($obj[$i]->{'IDSquadra'} == $sq && $obj[$i]->{'Pos'} >= 0) {
 
-	//for ($i=1; $i < count($obj); $i++) { 
-	//	if ($obj[$i]->{'IDSquadra'} == $sq && $obj[$i]->{'Pos'} >= 0) {
-			
+			// stampa semplicemente i nomi dei calciatori nella frmz
+			// $result[$obj[$i]->{'Nome'}] = $obj[$i]->{'Pos'};
+
 			// strippa il cognome da $obj[$i]->{'Nome'}
-			$cogn = 'Aguirre';
-			// cercalo in $stats
-			$tmpstats = $stats[$cogn];
-			// assegna le stats per quel calciatore al nome in result
+			// $cogn = 'Aguirre';
+			$cogn_nome = $obj[$i]->{'Nome'};
+			$pieces = explode(" ", $cogn_nome);
+			$cogn = $pieces[0];
+			# gestione eccezioni cognomi
+			if ($cogn == 'DE'||$cogn=='DI') $cogn = $cogn." ".$pieces[1]; 
 
-			//$result[$obj[$i]->{'Nome'}] = $tmpstats;
-			$result['Aguirre'] = $tmpstats;
-	//	}
-	//}
+			// cercalo in $stats
+		    $tmpstats = $stats[$cogn];
+
+			// assegna le stats per quel calciatore al nome in result
+		    if ($obj[$i]->{'Pos'} == 0) {
+				$result[$obj[$i]->{'Nome'}] = $tmpstats;
+			} else {
+				$riserve[$obj[$i]->{'Nome'}] = $tmpstats;
+			}
+			//$result[$obj[$i]->{'Nome'}] = $cogn;
+			// $result['Aguirre'] = $tmpstats;
+		}
+	}
 
 	$json['result'] = $result;
+	$json['riserve'] = $riserve;
 }
 
 echo json_encode($json);

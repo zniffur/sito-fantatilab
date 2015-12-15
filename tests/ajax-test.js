@@ -80,11 +80,73 @@ $('#btnSubmit').on('click', function() {
 				//$('#result').append(arrFantasquadre[data.result.fSquadra].Nome);
 				//$('#result').append(JSON.stringify(data.result));
 				$('#result').empty();
+				//$('#result').html('<table class="table table-striped" id="table_div">')
+				
+				var table = $('<table></table>').addClass('table table-striped');
+				
+				// stampa header Nome V AE Gf Gr Gs Rp Rs Au As BM TOT
+				table.append($('<thead>'));
+				var row = $('<tr>');	
+				row.append($('<th>').html('Nome'));
+				row.append($('<th>').html('Voto'));
+				row.append($('<th>').html('A/E'));
+				row.append($('<th>').html('Gf'));
+				row.append($('<th>').html('Gr'));
+				row.append($('<th>').html('Gs'));
+				row.append($('<th>').html('Rp'));
+				row.append($('<th>').html('Rs'));
+				row.append($('<th>').html('Au'));
+				row.append($('<th>').html('As'));
+				row.append($('<th>').html('BM'));
+				row.append($('<th>').html('TOT'));
+
+
+				table.append(row);
+				// stampa titolari
 				for(key in data.result)
 				{
 					// console.log(key + ':' + data.result[key]);
-					$('#result').append('<p>' + key + ':' + data.result[key] + '</p>')
+					//$('#result').append('<p>' + key + ':' + data.result[key] + '</p>')
+					var row = $('<tr>');
+					
+					row.append($('<td>').html(key));
+
+					var stats_calciatore = data.result[key];
+
+					if (!(jQuery.isEmptyObject(stats_calciatore)))
+						$.each(stats_calciatore, function(index, value){
+							row.append($('<td>').html(value));	
+						});
+					
+					// row.append($('<td>').html('stats_calciatore'));
+				    table.append(row);
+
 				}
+				
+				// stampa riserve
+				var row = $('<tr>');
+				table.append(row.append($('<td>').html('')))
+				
+				for(key in data.riserve)
+				{
+					// console.log(key + ':' + data.result[key]);	
+					//$('#result').append('<p>' + key + ':' + data.riserve[key] + '</p>');
+					var row = $('<tr>');
+					
+					row.append($('<td>').html(key));
+
+					var stats_calciatore = data.riserve[key];
+
+					if (!(jQuery.isEmptyObject(stats_calciatore)))
+						$.each(stats_calciatore, function(index, value){
+							row.append($('<td>').html(value));	
+						});
+					
+					// row.append($('<td>').html('stats_calciatore'));
+				    table.append(row);
+				}
+				$('#result').append('<p>');
+				$('#result').append(table);	
 			}
 
 		},
