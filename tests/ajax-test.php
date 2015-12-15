@@ -34,6 +34,10 @@ function get_all_stats_from_fg() {
 		$players = $xpath->query('div[1]/table[1]//tr[@class="P"]',$teamobj);
 		foreach ($players as $player) {
 			//echo $player->nodeValue."<br/>";
+			// $roles = $xpath->query('td[@class="r"]', $player);
+			// foreach ($roles as $role) { //only one
+			// 	$ruo = $role->nodeValue; ##
+			// }
 			$names = $xpath->query('td[@class="n"]', $player);
 			$bm = 0;
 			$v = 0;
@@ -98,15 +102,18 @@ function get_all_stats_from_fg() {
 				//echo " ".$numAssist;
 				$bm = $bm + ($numAssist)*1;
 			}
+
+
+
 			// echo "BM: ".$bm." ";
 			// echo "TOT: ".($bm + $v)." ";
 			//echo " ".$bm." ";
 			//echo " ".($bm + $v)." ";
 			//echo "<br/>";
 
-			//echo "Nome V AE Gf Gr Gs Rp Rs Au As BM TOT<br/>";
+			//echo "Nome Ruo V AE Gf Gr Gs Rp Rs Au As BM TOT<br/>";
+			//$obj[$nome] = array($ruo, $v, $ae, $gol_f, $gol_r, $gol_s, $rig_p, $rig_s, $aut_r, $numAssist, $bm, ($bm + $v));
 			$obj[$nome] = array($v, $ae, $gol_f, $gol_r, $gol_s, $rig_p, $rig_s, $aut_r, $numAssist, $bm, ($bm + $v));
-
 		}
 	}
 	return $obj;
@@ -118,6 +125,7 @@ $stats = get_all_stats_from_fg();
 
 header('Content-type: text/javascript');
 
+// return JSON structure
 $json = array(
 	'success' => false,
 	'result' => "",
@@ -141,19 +149,45 @@ if(isset($_POST['frmz'],$_POST['fSquadra'])){
 	for ($i=1; $i < count($obj); $i++) { 
 		if ($obj[$i]->{'IDSquadra'} == $sq && $obj[$i]->{'Pos'} >= 0) {
 
-			// stampa semplicemente i nomi dei calciatori nella frmz
 			// $result[$obj[$i]->{'Nome'}] = $obj[$i]->{'Pos'};
 
+			// ruolo
+			$tmpruo = $obj[$i]->{'Ruolo'};
+			switch ($tmpruo) {
+				case '1':
+					$ruo = 'P';
+					break;
+				case '2':
+					$ruo = 'D';
+					break;
+				case '3':
+					$ruo = 'C';
+					break;
+				case '4':
+					$ruo = 'A';
+					break;
+			}
+
 			// strippa il cognome da $obj[$i]->{'Nome'}
-			// $cogn = 'Aguirre';
 			$cogn_nome = $obj[$i]->{'Nome'};
 			$pieces = explode(" ", $cogn_nome);
 			$cogn = $pieces[0];
 			# gestione eccezioni cognomi
-			if ($cogn == 'DE'||$cogn=='DI') $cogn = $cogn." ".$pieces[1]; 
+			if ($cogn == 'DE'||$cogn=='DI') $cogn = $cogn." ".$pieces[1];
+			if ($cogn == 'DONNARUMMA') $cogn = 'DONNARUMMA G';
+			if ($cogn == 'MARIO') $cogn = $cogn." ".$pieces[1];
+			if ($cogn == 'JUAN') $cogn = 'JUAN JESUS';
+			if ($cogn == 'FELIPE') $cogn = 'FELIPE MELO';
+			if ($cogn == 'DIAKITE') $cogn = 'DIAKITE\'';
+			if ($cogn_nome == 'ROMAGNOLI Alessio') $cogn = 'ROMAGNOLI A';
+			if ($cogn_nome == 'PISANO Eros') $cogn = 'PISANO E';
+			if ($cogn == 'DIOUSSE') $cogn = 'DIOUSSE\'';
 
 			// cercalo in $stats
 		    $tmpstats = $stats[$cogn];
+		    // prepend ruolo a $tmpstats
+		    if (!(empty($tmpstats)))
+		    	array_unshift($tmpstats, $ruo);
 
 			// assegna le stats per quel calciatore al nome in result
 		    if ($obj[$i]->{'Pos'} == 0) {

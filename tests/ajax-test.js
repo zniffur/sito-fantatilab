@@ -84,10 +84,11 @@ $('#btnSubmit').on('click', function() {
 				
 				var table = $('<table></table>').addClass('table table-striped');
 				
-				// stampa header Nome V AE Gf Gr Gs Rp Rs Au As BM TOT
+				// stampa header Nome Ruo V AE Gf Gr Gs Rp Rs Au As BM TOT
 				table.append($('<thead>'));
 				var row = $('<tr>');	
 				row.append($('<th>').html('Nome'));
+				row.append($('<th>').html('Ruolo'));
 				row.append($('<th>').html('Voto'));
 				row.append($('<th>').html('A/E'));
 				row.append($('<th>').html('Gf'));
