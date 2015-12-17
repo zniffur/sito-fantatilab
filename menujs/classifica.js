@@ -1,7 +1,7 @@
 document.write("<table border=1 bgcolor=#999999 width=100% cellspacing=0 cellpadding=2>")
 for (conta=1;conta<=NumSquVisCla;conta+=1)
 {
-offset = 12
+offset = 14
 document.write("<tr>")
 
 if( conta % 2 == 0 ) document.write("<td bgcolor='#FFFFFF' align='left'><font size=1>")
