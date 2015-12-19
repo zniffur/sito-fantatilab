@@ -47,7 +47,7 @@
       <div id="header">
         <script type="text/javascript">Header()</script>
       </div>
-      
+
       <div id="navigation">
         <ul>
           <li><a href="index.html" title="Home page">Home</a></li>
@@ -63,15 +63,15 @@
       <!-- <li><a href="televideo.php" title="Televideo">Televideo</a></li> -->
         </ul>
       </div>
-      
+
       <div id="content">
         <h2 class="title">Invio formazione</h2>
         <div class="agg2">
-                  
+
           <?php
             // tira fuori data e ora dal server e li inverte per il controllo
-            $day = date("d",time()); 
-            $month = date("m",time()); 
+            $day = date("d",time());
+            $month = date("m",time());
             $year = date("Y",time());
             $hour = date("H", time());
             $min= date("i", time());
@@ -92,11 +92,11 @@
             //document.write ("<br> DATA E ORA ODIERNE INVERTITE: " + poppo + " - DATA E ORA MASSIMO INVIO INVERTITE: " + pluto)
 
             if (poppo < pluto) {
-                    
+
                     var cGio,cFsq;
                     cFsq = JSQueryString("Fsq");
                     cGio = JSQueryString("Gio");
-                    
+
                     if (CaricaDefault == "si") {
                             CaricaDefault = true;
                     } else {
@@ -106,11 +106,11 @@
                             if (cFsq == null || cFsq=="") cFsq = arrFantasquadre[1].ID;
                             if (cGio == null || cGio=="") cGio = GetProssimaGiornataDaGiocare();
                     }
-                    GeneraIntestazioneInvioFormazione(cFsq, cGio, "invform");
-                    
+                    GeneraIntestazioneInvioFormazione(cFsq, cGio);
+
                     var result;
                     result = GeneraSelezioneCompetizioni(cFsq, cGio);
-                    
+
                     if (result) {
                             GeneraTabellaGiocatori();
                             GeneraControlliPerInvio();
@@ -125,7 +125,7 @@
           </table>
         </div>
       </div>
-      
+
       <div id="footer">
           <script type="text/javascript">Footer()</script>
       </div>

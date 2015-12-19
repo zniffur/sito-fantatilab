@@ -10,12 +10,12 @@
 //  * eliminato l'ordinamento per ruolo della panchina
 //  * inserita l'opzione per l'ordinamento per ruolo della panchina
 //  * inserite le opzioni per non consentire agli utenti la modifica della
-//    giornata e degli incontri per cui è valida la formazione
-//  * nel caso di un singolo incontro, il relativo checkbox è disabilitato,
-//    non è quindi più possibile deselezionarlo
+//    giornata e degli incontri per cui ï¿½ valida la formazione
+//  * nel caso di un singolo incontro, il relativo checkbox ï¿½ disabilitato,
+//    non ï¿½ quindi piï¿½ possibile deselezionarlo
 // Versione 0.9.6 (07/10/2005)
-//  * modificata la modalità di passaggio parametri al modulo d'invio e
-//    salvataggio formazione per garantire la compatibilità anche con
+//  * modificata la modalitï¿½ di passaggio parametri al modulo d'invio e
+//    salvataggio formazione per garantire la compatibilitï¿½ anche con
 //    Internet Explorer
 // Versione 1.0.0 (02/12/2005)
 //  * inserita l'opzione per il controllo dell'ordine di tiro dei portieri
@@ -34,7 +34,7 @@
 //  * modificato controllo sulla correttezza dell'ID squadra dei giocatori
 //    in rosa (il metodo precedente poteva non funzionare per campionati di A
 //    non organizzati completamente con gironi all'italiana)
-//Modificato da Guido Zerbinati per inserire controllo data e ora invio (21/10/2006) 
+//Modificato da Guido Zerbinati per inserire controllo data e ora invio (21/10/2006)
 //-----------------------------------------------------------------------------
 
 // Oggetto Giocatore per Invio Formazione
@@ -71,14 +71,14 @@ var incontriValidi = new Array();
 
 var idxFsq;
 
-function GeneraIntestazioneInvioFormazione(cFsq, cGio, fname)
+function GeneraIntestazioneInvioFormazione(cFsq, cGio)
 // Questo codice genera l'intestazione per la scelta della fantasquadra
 // e della giornata
 // Utilizza MaxA definito nel SerieADati
 {
 	var arrF = new Object();
 	arrF = arrFantasquadre;
-	document.write("<form name='frmIF' id='frmIF' action='" + fname + ".php' method='get'>")
+	document.write("<form name='frmIF' id='frmIF' action='invform.php' method='get'>")
 	document.write("<table width='100%' border='0' cellspacing='0' cellpadding='0'>")
 	document.write("<tr><td width='5%' class='t-xxsB'><nobr>Fantasquadra:&nbsp;<select name='Fsq' class='t-xxs' id='Fsq'>")
 	var i;
@@ -111,7 +111,7 @@ function GeneraSelezioneCompetizioni(cFsq, cGio)
 	var i;
 
 	// Ottiene incontri della giornata selezionata che interessano la squadra
-	// controllando che non siano già stati giocati
+	// controllando che non siano giï¿½ stati giocati
 	for (i = 1; i < arrIncontri.length; i++)
 		if (
 		arrIncontri[i].GiornataDiA == cGio &&
@@ -158,7 +158,7 @@ function GeneraTabellaGiocatori()
 	document.write("<tr><td width='62.5%' align='center' valign='top'>");
 	var tabR = new Tabella(1, 8);
 
-	// Imposta proprietà della tabella
+	// Imposta proprietï¿½ della tabella
 	tabR.nome = "Rosa fantasquadra";
 	tabR.larghezza = 100;
 	tabR.border = 0;
@@ -208,7 +208,7 @@ function GeneraTabellaGiocatori()
 		// Nome (Squadra)
 		tabR.SetValore(cnt, 2, "<nobr><span class='t-xxs" + colore + "B' style='cursor: pointer' id='r_nome" + g + "' onClick='ClickGiocatoreRosa(" + g + ")'>" + eval(gg.Nome) + " (" + eval(gg.SquadraDiA) + ")</span>");
 		tabR.SetStile(cnt, 2, "Form" + pd);
-		// Affidabilità
+		// Affidabilitï¿½
 		tabR.SetValore(cnt, 3, "<span class='t-xxs'>" + gg.Affidabilita + "</span>");
 		tabR.SetStile(cnt, 3, "Form" + pd + "Centro");
 		// Dati
@@ -254,7 +254,7 @@ function GeneraTabellaGiocatori()
 	document.write("<td width='35%' align='center' valign='top'>");
 	var tabF = new Tabella(1, 4 + rigoristi == true);
 
-	// Imposta proprietà della tabella
+	// Imposta proprietï¿½ della tabella
 	tabF.Nome = "Formazione";
 	tabF.Larghezza = 100;
 	tabF.Border = 0;
@@ -347,7 +347,7 @@ function ClickGiocatoreFormazione(pos)
 
 function InserisciTitolare(gg, idG)
 {
-	// Controlla se il nuovo modulo è compatibile
+	// Controlla se il nuovo modulo ï¿½ compatibile
 	moduloInserito[gg.Ruolo]++;
 
 	var compatibile = false;
@@ -362,7 +362,7 @@ function InserisciTitolare(gg, idG)
 
 	if (!compatibile) {
 		moduloInserito[gg.Ruolo]--;
-		alert("Impossibile inserire il giocatore in formazione: il modulo che ne deriverebbe non è ammesso nella competizione");
+		alert("Impossibile inserire il giocatore in formazione: il modulo che ne deriverebbe non ï¿½ ammesso nella competizione");
 		return false;
 	}
 
@@ -371,7 +371,7 @@ function InserisciTitolare(gg, idG)
 	for (p = 1; p <= 11; p++)
 		if (arrFormazione[p] == -1 || arrInvioFormazione[arrFormazione[p]].Ruolo > gg.Ruolo) break;
 
-	// Sposta giocatori già inseriti
+	// Sposta giocatori giï¿½ inseriti
 	var i;
 	for (i = titolariInseriti; i >= p; i--) {
 		arrFormazione[i + 1] = arrFormazione[i];
@@ -391,7 +391,7 @@ function InserisciTitolare(gg, idG)
 
 function RimuoviTitolare(gg, idG)
 {
-	// Sposta giocatori già inseriti
+	// Sposta giocatori giï¿½ inseriti
 	var i;
 	for (i = gg.Formazione; i <= 11; i++) {
 		if (i < titolariInseriti) {
@@ -413,14 +413,14 @@ function RimuoviTitolare(gg, idG)
 
 function InserisciRiserva(gg, idG)
 {
-	// Controlla se è possibile inserire altre riserve
+	// Controlla se ï¿½ possibile inserire altre riserve
 	if (totaleRiserveInserite >= totaleNumeroMassimoRiserve) {
-		alert("Hai già inserito il numero massimo di riserve");
+		alert("Hai giï¿½ inserito il numero massimo di riserve");
 		return false;
 	}
 	if (numeroMassimoRiserve[gg.Ruolo] != -1 &&
 	riserveInserite[gg.Ruolo] >= numeroMassimoRiserve[gg.Ruolo]) {
-		alert("Hai già inserito il numero massimo di riserve in questo ruolo");
+		alert("Hai giï¿½ inserito il numero massimo di riserve in questo ruolo");
 		return false;
 	}
 
@@ -429,7 +429,7 @@ function InserisciRiserva(gg, idG)
 	for (p = 12; p <= 11 + totaleNumeroMassimoRiserve; p++)
 		if (arrFormazione[p] == -1 || (panchinaOrdinata && arrInvioFormazione[arrFormazione[p]].Ruolo > gg.Ruolo)) break;
 
-	// Sposta giocatori già inseriti
+	// Sposta giocatori giï¿½ inseriti
 	var i;
 	for (i = 11 + totaleRiserveInserite; i >= p; i--) {
 		arrFormazione[i + 1] = arrFormazione[i];
@@ -449,7 +449,7 @@ function InserisciRiserva(gg, idG)
 
 function RimuoviRiserva(gg, idG)
 {
-	// Sposta giocatori già inseriti
+	// Sposta giocatori giï¿½ inseriti
 	var i;
 	for (i = gg.Formazione; i <= 11 + totaleNumeroMassimoRiserve; i++) {
 		if (i < 11 + totaleRiserveInserite) {
@@ -623,7 +623,7 @@ function InviaFormazione()
 					document.getElementById("emailData").target = "ssWindow" + i;
 					document.getElementById("emailData").action = sendmailURL;
 					document.getElementById("emailData").submit();
-          
+
 				break;
 			}
 		}
@@ -694,13 +694,13 @@ function ControllaFormazione()
 {
 	// Controlla titolari inseriti
 	if (titolariInseriti != 11) {
-		alert("Impossibile inviare la formazione: uno o più titolari non inseriti");
+		alert("Impossibile inviare la formazione: uno o piï¿½ titolari non inseriti");
 		return false;
 	}
 
 	// Controlla riserve inserite
 	if (totaleRiserveInserite < totaleNumeroMassimoRiserve)
-		if (!confirm("La formazione è incompleta, vuoi inviarla comunque?")) return;
+		if (!confirm("La formazione ï¿½ incompleta, vuoi inviarla comunque?")) return;
 
 	// Determina se incontri selezionati richiedono rigoristi
 	if (!rigoristi) return true;
@@ -730,7 +730,7 @@ function ControllaFormazione()
 	if (regolaRigoristi)
 		for (i = 1; i <= 11 + totaleNumeroMassimoRiserve; i++)
 			if (arrFormazione[i] != -1 && arrRigoristi[i] < 11 && arrInvioFormazione[arrFormazione[i]].Ruolo == 1) {
-				alert("Impossibile inviare la formazione: ordine rigoristi non valido (portiere < 11°)");
+				alert("Impossibile inviare la formazione: ordine rigoristi non valido (portiere < 11ï¿½)");
 				return false;
 			}
 

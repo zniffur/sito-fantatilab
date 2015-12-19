@@ -25,7 +25,7 @@ function I(ID,IncAcc,IDTipo,Giocato,IDFantagiornata,Fantagiornata,IDCompetizione
 	this.M2 = new Coppia(M2Casa,M2Fuori)
 	this.M3 = new Coppia(M3Casa,M3Fuori)
 	this.Giocato = Giocato
-	this.GiornataDiA = GiornataDiA	
+	this.GiornataDiA = GiornataDiA
 }
 
 /***********************************
@@ -92,7 +92,7 @@ var d10
 	// determina le squadre della Divisione
 	for (i=1;i<arr.length;i++) {
 		bAggiungi = false
-		// solo per le squadre della lega, non extra 
+		// solo per le squadre della lega, non extra
 		if ((parseInt(arr[i].IDLegaSquadre.Casa) != 0) || (parseInt(arr[i].IDLegaSquadre.Fuori) != 0)) {
 			bAggiungi = true
 		} else {
@@ -100,7 +100,7 @@ var d10
 				if (arr[i].IDSquadre.Casa == arrF[j]) bAggiungi = true
 			}
 			if (!bAggiungi) {
-				// controlla quella fuori casa	
+				// controlla quella fuori casa
 				if ((parseInt(arr[i].IDTipo) != INC_GRANPREMIO) && (parseInt(arr[i].IDTipo) != INC_RIPOSO)) {
 					for (j=1;j<arrF.length;j++) {
 						if (arr[i].IDSquadre.Fuori == arrF[j]) bAggiungi = true
@@ -131,7 +131,7 @@ var sSqCasa, sSqFuori, sIncTemp, sRisTemp
 var iMaxRiga = 0, iCorrCol = 4, iCorrRiga = 1, iLastPosRiga = 1
 var bCompetizioneCambiata = false, iUltimaRiga = 0, iTemp, sTemp
 var iUltimoFormato = 0 // pari = 0, dispari = 1
-var d10	
+var d10
 	// Genera la tabella del calendario (SOLO la tabella)
 	// Apri tabella
 	//arr = RiempiCalendario(arr)
@@ -148,7 +148,7 @@ var d10
 	for (i=1;i<arr.length;i++) {
 		iCorrGiornataDiA = arr[i].GiornataDiA
 		if (iCorrGiornataDiA != iPrecGiornataDiA) {
-			// Se la giornata di A è diversa, stampala
+			// Se la giornata di A ï¿½ diversa, stampala
 			iCorrRiga++
 			if (iCorrCol==1) {
 				iCorrCol=4
@@ -177,8 +177,8 @@ var d10
 			iUltimoFormato = 0
 		}
 		sCorrFantagiornata = arr[i].Fantagiornata
-		if (((sPrecFantagiornata != sCorrFantagiornata) && sCorrFantagiornata != "") || ((sPrecFantagiornata != sCorrFantagiornata) && bCompetizioneCambiata)) { 
-			// Se cambia la fantagiornata o la competizione e la fantagiorata è definita, stampale entrambe
+		if (((sPrecFantagiornata != sCorrFantagiornata) && sCorrFantagiornata != "") || ((sPrecFantagiornata != sCorrFantagiornata) && bCompetizioneCambiata)) {
+			// Se cambia la fantagiornata o la competizione e la fantagiorata ï¿½ definita, stampale entrambe
 			sPrecFantagiornata = sCorrFantagiornata
 			cale.SetStile(iCorrRiga,iCorrCol,"cale-comp")
 			if (sCorrFantagiornata == "") {
@@ -239,7 +239,7 @@ var d10
 			cale.SetValore(iCorrRiga,iCorrCol+1,"")
 		}
 		iCorrRiga++
-		if (iCorrRiga >= iUltimaRiga) iUltimaRiga = iCorrRiga 
+		if (iCorrRiga >= iUltimaRiga) iUltimaRiga = iCorrRiga
 	if ((i % d10) == 0)	Stato("Generazione Calendario..." + (Math.floor((i*100)/arr.length)) + "%")
 	} // for
 	//larghezza colonne
@@ -273,16 +273,17 @@ i=arrIncontri.length-1
 }
 
 function GetProssimaGiornataDaGiocare() {
-// ritorna la prossima giornata di A da giocare. Se sono state
-// giocate tutte ritorna comunque maxa
-var i,trovata=false,gio=0
-if (arrIncontri[1].Giocato == false) return arrIncontri[1].GiornataDiA;
-i=arrIncontri.length-1
-	do {
-		if (arrIncontri[i].Giocato && arrIncontri[i].IDTipo!=INC_RIPOSO) {
-			gio=arrIncontri[i].GiornataDiA
-		}
-		i--
-	} while (gio==0 && i>=1)
-	return (gio==MaxA?MaxA:gio+1)
+  // ritorna la prossima giornata di A da giocare. Se sono state
+  // giocate tutte ritorna comunque maxa
+  var i, trovata = false,
+    gio = 0
+  if (arrIncontri[1].Giocato == false) return arrIncontri[1].GiornataDiA;
+  i = arrIncontri.length - 1
+  do {
+    if (arrIncontri[i].Giocato && arrIncontri[i].IDTipo != INC_RIPOSO) {
+      gio = arrIncontri[i].GiornataDiA
+    }
+    i--
+  } while (gio == 0 && i >= 1)
+  return (gio == MaxA ? MaxA : gio + 1)
 }
