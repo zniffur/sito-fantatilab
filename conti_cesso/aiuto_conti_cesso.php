@@ -76,8 +76,16 @@
       			echo "<td>".$name->nodeValue." ";
       			// Voto
       			$voto = $name->nextSibling;
-      			echo "<td>".$voto->nodeValue." ";
-      			$v = GetFloat(substr($voto->nodeValue, 0, -1));
+                // controlla se il calciatore è senza voto, se non lo è, stampa voto 
+                // e mette il voto in $v, che serve per il calcolo finale
+                if ($voto->attributes->item(0)->nodeValue == 'u') {
+                    echo "<td>S.V.";
+                    $v = 0;
+                } else {
+                    echo "<td>".$voto->nodeValue." ";
+                    $v = GetFloat(substr($voto->nodeValue, 0, -1));    
+                }
+      			
       			// Amm. o Esp.
       			if ($voto->attributes->item(0)->nodeValue == 'vamm') {
       				echo "<td>"."AMM ";

@@ -47,8 +47,15 @@ function get_all_stats_from_fg() {
 				$nome = strtoupper($name->nodeValue); ##
 				// Voto
 				$voto = $name->nextSibling;
-				// echo $voto->nodeValue." ";
+				
 				$v = GetFloat(substr($voto->nodeValue, 0, -1)); #
+                
+                if ($voto->attributes->item(0)->nodeValue == 'u') {
+                    $v = 0;
+                } else {
+                    // echo $voto->nodeValue." ";
+                    $v = GetFloat(substr($voto->nodeValue, 0, -1));    
+                }
 				// Amm. o Esp.
 				if ($voto->attributes->item(0)->nodeValue == 'vamm') {
 					// echo "AMM ";
@@ -147,6 +154,8 @@ if(isset($_POST['frmz'],$_POST['fSquadra'])){
 	$riserve = array();
 
 	for ($i=1; $i < count($obj); $i++) { 
+        // per ogni calciatore delle formazioni della giornata (frmz)
+        // se è della squadra fSquadra e se è titolare o riserva (Pos>0)
 		if ($obj[$i]->{'IDSquadra'} == $sq && $obj[$i]->{'Pos'} >= 0) {
 
 			// $result[$obj[$i]->{'Nome'}] = $obj[$i]->{'Pos'};
