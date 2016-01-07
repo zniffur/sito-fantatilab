@@ -191,6 +191,7 @@ if(isset($_POST['frmz'],$_POST['fSquadra'])){
 			if ($cogn_nome == 'ROMAGNOLI Alessio') $cogn = 'ROMAGNOLI A';
 			if ($cogn_nome == 'PISANO Eros') $cogn = 'PISANO E';
 			if ($cogn == 'DIOUSSE') $cogn = 'DIOUSSE\'';
+            if ($cogn == 'BARRETO') $cogn = 'BARRETO E';
 
 			// cercalo in $stats
 		    $tmpstats = $stats[$cogn];

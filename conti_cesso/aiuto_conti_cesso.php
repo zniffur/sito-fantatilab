@@ -123,7 +123,7 @@
       		}
       
       		// # assist
-      		$assists = $xpath->query('td[@class="af1"]', $player);
+      		$assists = $xpath->query('td[@class="a green "]', $player);
       		$numAssist = $assists->item(0)->nodeValue;
       		if ($numAssist > 0) {
       			//echo "Assist: ".$numAssist;
@@ -139,11 +139,11 @@
                   echo '</tr>';
       	}
       }
-      exit(0);
+      //exit(0);
 
       echo "</tbody></table></div>";
       
-      echo "<br>-- by Zniff --<br>";
+      echo "-- by Zniff --";
       
       ?>
     </body>
