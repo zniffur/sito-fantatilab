@@ -192,6 +192,16 @@ if(isset($_POST['frmz'],$_POST['fSquadra'])){
 			if ($cogn_nome == 'PISANO Eros') $cogn = 'PISANO E';
 			if ($cogn == 'DIOUSSE') $cogn = 'DIOUSSE\'';
             if ($cogn == 'BARRETO') $cogn = 'BARRETO E';
+            if ($cogn_nome == 'FERNANDES Bruno Miguel') $cogn = 'BRUNO FERNANDES';
+            if ($cogn_nome == 'GOMEZ Juan Ignacio') $cogn = 'JUANITO GOMEZ';
+            if ($cogn_nome == 'SANSONE Nicola Domenico') $cogn = 'SANSONE N';
+            if ($cogn_nome == 'LOPEZ Maximiliano Gaston') $cogn = 'MAXI LOPEZ';
+            if ($cogn_nome == 'ZAPATA Cristian') $cogn = 'ZAPATA C';
+            if ($cogn_nome == 'ZAPATA Duvan') $cogn = 'ZAPATA D';
+            if ($cogn_nome == 'PERES Bruno da Silva') $cogn = 'BRUNO PERES';
+            if ($cogn == 'FLORO') $cogn = 'FLORO FLORES';
+            if ($cogn == 'IAGO') $cogn = 'IAGO FALQUE';
+            
 
 			// cercalo in $stats
 		    $tmpstats = $stats[$cogn];

@@ -52,7 +52,6 @@ $('#btnSubmit').on('click', function() {
 				row.append($('<th>').html('BM'));
 				row.append($('<th>').html('TOT'));
 
-
 				table.append(row);
 				// stampa titolari
 				for(key in data.result)
