@@ -39,8 +39,10 @@ $('#btnSubmit').on('click', function() {
 				table.append($('<thead>'));
 				var row = $('<tr>');	
 				row.append($('<th>').html('Nome'));
-				row.append($('<th>').html('Ruolo'));
-				row.append($('<th>').html('Voto'));
+                //row.append($('<th>').html('Pos'));
+				row.append($('<th>').html('R'));
+                row.append($('<th>').html('FV'));
+				row.append($('<th>').html('V'));
 				row.append($('<th>').html('A/E'));
 				row.append($('<th>').html('Gf'));
 				row.append($('<th>').html('Gr'));
@@ -50,10 +52,11 @@ $('#btnSubmit').on('click', function() {
 				row.append($('<th>').html('Au'));
 				row.append($('<th>').html('As'));
 				row.append($('<th>').html('BM'));
-				row.append($('<th>').html('TOT'));
-
+				
 				table.append(row);
 				// stampa titolari
+                
+                // result(Nome -> Ruo FV V AE Gf Gr Gs Rp Rs Au As BM, ...) 
 				for(key in data.result)
 				{
 					// console.log(key + ':' + data.result[key]);
@@ -66,39 +69,53 @@ $('#btnSubmit').on('click', function() {
 
 					if (!(jQuery.isEmptyObject(stats_calciatore)))
 						$.each(stats_calciatore, function(index, value){
-							row.append($('<td>').html(value));	
+                            if (index != 0) 
+                                row.append($('<td>').html(value));	
 						});
 					
 					// row.append($('<td>').html('stats_calciatore'));
 				    table.append(row);
 
 				}
+                
+                // stampa riga di interruzione
+                var row = $('<tr>');
+                row.append($('<td colspan="13" align="center">').html("**"));
+                table.append(row);
+                
+                // stampa riserve
+                var riserve = [];
+                for (key in data.riserve) {
+                    stats_calciatore = data.riserve[key];
+                    //console.log(key + " " + stats_calciatore[0]);
+                    riserve[stats_calciatore[0]] = key;
+                }
+                //console.log(riserve);
 				
-				// stampa riserve
-				var row = $('<tr>');
-				table.append(row.append($('<td>').html('')))
-				
-				for(key in data.riserve)
+                // riserve(Nome -> POS Ruo FV V AE Gf Gr Gs Rp Rs Au As BM, ...)
+				for	(i = 1; i < riserve.length; i++)
 				{
 					// console.log(key + ':' + data.result[key]);	
 					//$('#result').append('<p>' + key + ':' + data.riserve[key] + '</p>');
 					var row = $('<tr>');
 					
-					row.append($('<td>').html(key));
+					row.append($('<td>').html(riserve[i]));
 
-					var stats_calciatore = data.riserve[key];
+					var stats_calciatore = data.riserve[riserve[i]];
 
 					if (!(jQuery.isEmptyObject(stats_calciatore)))
 						$.each(stats_calciatore, function(index, value){
-							row.append($('<td>').html(value));	
+                            if (index != 0)
+                                row.append($('<td>').html(value));	
 						});
 					
 					// row.append($('<td>').html('stats_calciatore'));
 				    table.append(row);
 				}
-				$('#result').append('<p>');
-				$('#result').append(table);	
-			}
+
+                $('#result').append('<p>');
+				$('#result').append(table);
+            }
 
 		},
 		error: function(e) {

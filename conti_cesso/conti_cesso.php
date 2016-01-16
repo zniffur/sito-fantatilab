@@ -120,7 +120,8 @@ function get_all_stats_from_fg() {
 
 			//echo "Nome Ruo V AE Gf Gr Gs Rp Rs Au As BM TOT<br/>";
 			//$obj[$nome] = array($ruo, $v, $ae, $gol_f, $gol_r, $gol_s, $rig_p, $rig_s, $aut_r, $numAssist, $bm, ($bm + $v));
-			$obj[$nome] = array($v, $ae, $gol_f, $gol_r, $gol_s, $rig_p, $rig_s, $aut_r, $numAssist, $bm, ($bm + $v));
+            //echo "FV V AE Gf Gr Gs Rp Rs Au As BM<br/>";
+			$obj[$nome] = array(($bm + $v), $v, $ae, $gol_f, $gol_r, $gol_s, $rig_p, $rig_s, $aut_r, $numAssist, $bm);
 		}
 	}
 	return $obj;
@@ -205,22 +206,42 @@ if(isset($_POST['frmz'],$_POST['fSquadra'])){
 
 			// cercalo in $stats
 		    $tmpstats = $stats[$cogn];
-		    // prepend ruolo a $tmpstats
-		    if (!(empty($tmpstats)))
+		    
+            // se il calciatore ha statistiche su Fantagazzetta
+		    if (!(empty($tmpstats))) {
+                // prepend ruolo a $tmpstats
 		    	array_unshift($tmpstats, $ruo);
 
-			// assegna le stats per quel calciatore al nome in result
-		    if ($obj[$i]->{'Pos'} == 0) {
-				$result[$obj[$i]->{'Nome'}] = $tmpstats;
-			} else {
-				$riserve[$obj[$i]->{'Nome'}] = $tmpstats;
-			}
+                // assegna le stats per quel calciatore al nome in result
+                $pos = $obj[$i]->{'Pos'};
+                if ($pos == 0) {
+                    array_unshift($tmpstats, $pos);
+                    $result[$obj[$i]->{'Nome'}] = $tmpstats;
+                } else {
+                    // prepende a ruolo+tmpstats la posizione del calciatore nella lista delle riserve 
+                    array_unshift($tmpstats, $pos);
+                    $riserve[$obj[$i]->{'Nome'}] = $tmpstats;
+                }
+            } else {
+                // il calciatore non ha statistiche. Riempio result o riserve con 
+                // la posizione, ruolo  e tutti '-'
+                // result(Nome -> POS Ruo FV V AE Gf Gr Gs Rp Rs Au As BM, ...)
+                $pos = $obj[$i]->{'Pos'};
+                if ($pos == 0) {
+                    $result[$obj[$i]->{'Nome'}] = array($pos, $ruo, "-","-","-","-","-","-","-","-","-","-","-");
+                } else {
+                    $riserve[$obj[$i]->{'Nome'}] = array($pos, $ruo, "-","-","-","-","-","-","-","-","-","-","-");
+                }
+            }
+
 			//$result[$obj[$i]->{'Nome'}] = $cogn;
 			// $result['Aguirre'] = $tmpstats;
 		}
 	}
 
+    // result(Nome -> POS Ruo FV V AE Gf Gr Gs Rp Rs Au As BM, ...)
 	$json['result'] = $result;
+    // riserve(Nome -> POS Ruo FV V AE Gf Gr Gs Rp Rs Au As BM, ...)
 	$json['riserve'] = $riserve;
 }
 

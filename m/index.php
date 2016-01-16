@@ -87,9 +87,9 @@ document.write(anno)
                         </A>
                     </DIV>
                     <DIV class=nws_article>
-                        <A class=nws_snipp_lst href="../conti_cesso/conti_cesso.html">
+                        <A class=nws_snipp_lst href="../conti_cesso/conti_cesso_m.html">
                             <H3><img src="img/scudetto.png" height="40" align="left">CONTI CESSO</H3>
-                            <P>Fai i conti comodamente seduto sulla tazza.</P>
+                            <P>Fai i conti il luned&egrave; mattina</P>
                         </A>
                     </DIV>
                 </TD>
