@@ -190,6 +190,7 @@ if(isset($_POST['frmz'],$_POST['fSquadra'])){
 			if ($cogn == 'FELIPE') $cogn = 'FELIPE MELO';
 			if ($cogn == 'DIAKITE') $cogn = 'DIAKITE\'';
 			if ($cogn_nome == 'ROMAGNOLI Alessio') $cogn = 'ROMAGNOLI A';
+			if ($cogn_nome == 'ROMAGNOLI Simone') $cogn = 'ROMAGNOLI S';
 			if ($cogn_nome == 'PISANO Eros') $cogn = 'PISANO E';
 			if ($cogn == 'DIOUSSE') $cogn = 'DIOUSSE\'';
             if ($cogn == 'BARRETO') $cogn = 'BARRETO E';
@@ -202,7 +203,13 @@ if(isset($_POST['frmz'],$_POST['fSquadra'])){
             if ($cogn_nome == 'PERES Bruno da Silva') $cogn = 'BRUNO PERES';
             if ($cogn == 'FLORO') $cogn = 'FLORO FLORES';
             if ($cogn == 'IAGO') $cogn = 'IAGO FALQUE';
-            
+			if ($cogn_nome == 'GONZALEZ Giancarlo') $cogn = 'GONZALEZ G';
+			if ($cogn_nome == 'RODRIGUEZ Gonzalo Javier') $cogn = 'RODRIGUEZ GO';
+			if ($cogn_nome == 'ALONSO Marcos') $cogn = 'MARCOS ALONSO';
+			if ($cogn_nome == 'VALERO Borja Iglesias') $cogn = 'BORJA VALERO';
+			if ($cogn_nome == 'KEITA Balde Diao') $cogn = 'KEITA B';
+			if ($cogn_nome == 'MELO Felipe') $cogn = 'FELIPE MELO';
+			if ($cogn_nome == 'EL KADDOURI Omar') $cogn = 'EL KADDOURI';
 
 			// cercalo in $stats
 		    $tmpstats = $stats[$cogn];
