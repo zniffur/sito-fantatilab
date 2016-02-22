@@ -215,7 +215,7 @@ if(isset($_POST['frmz'],$_POST['fSquadra'])){
 			if ($cogn_nome == 'KEITA Seydou') $cogn =  'KEITA S';
 			if ($cogn_nome == 'ALVAREZ Ricardo Gabriel') $cogn =  'ALVAREZ R';
 			if ($cogn_nome == 'EL SHAARAWY Stephan') $cogn =  'EL SHAARAWY';
-			
+			if ($cogn_nome == 'M\'POKU Paul-Jose') $cogn =  'MPOKU';
 
 			// cercalo in $stats
 		    $tmpstats = $stats[$cogn];
