@@ -1,3 +1,28 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Conti cesso</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+</head>
+<body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
 <?php
 
 function mytrim($mystring){
@@ -46,7 +71,7 @@ foreach ($items as $item) { // per ogni squadra
 //          echo $i.' '.$dati->item($i)->nodeValue.'</br>';  
 //        }
         
-        $nome = mytrim($dati->item(4)->nodeValue);
+        $nome =  $dati->item(4)->nodeValue; // no trim, altrimenti nome attaccato a cognome
         $ruolo = mytrim($dati->item(2)->nodeValue);
         $v = mytrim($dati->item(12)->nodeValue);
         $gf = mytrim($dati->item(14)->nodeValue);
@@ -57,11 +82,15 @@ foreach ($items as $item) { // per ogni squadra
         $rs = mytrim($dati->item(42)->nodeValue);
         $amm = $xpath->query('td[@class="cart-giallo"]', $player);
         $esp = $xpath->query('td[@class="cart-rosso"]', $player);
-    
         
+        $v = (float)$v;
+        $bm = (float)$gf*3-(float)$gs-(float)$au*2+(float)$as+(float)$rp*3-(float)$rs*3;
+            
         echo $nome.' '.$ruolo.' '.$v.' '.$gf.' '.$gs.' '.$au.' '.$as.' '.$rp.' '.$rs;
-        if ($amm->length > 0) echo ' AMM ';        
-        if ($esp->length > 0) echo ' ESP ';
+        if ($amm->length > 0) {echo ' AMM '; $bm = $bm -0.5;}
+        if ($esp->length > 0) {echo ' ESP '; $bm = $bm -1;}
+        echo ' '.$bm.' ';
+        echo '<b>'.($v + $bm).'</b>';
         
         echo '</br>'; // fine player
                 
@@ -69,6 +98,7 @@ foreach ($items as $item) { // per ogni squadra
     echo '</br>'; // fine squadra
 }
 echo "-- by Zniff --";
-exit(0);
 
 ?>
+</body>
+</html>
