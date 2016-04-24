@@ -56,7 +56,7 @@ echo '<a href="conti_cesso.html" class="btn btn-info btn-md" role="button">Back<
 echo '<h1 align="center">Voti ultima giornata</h1>';
 echo '<table class="table table-bordered table-condensed"><thead><tr>';
 
-echo "<th>Nome <th>V <th>FV <th>AE <th>Gf <th>Gs <th>Rp <th>Rs <th>Au <th>As <th>BM";
+echo "<th>Nome <th>R <th>V <th>FV <th>AE <th>Gf <th>Gs <th>Rp <th>Rs <th>Au <th>As <th>BM";
 
 echo "</tr></thead>";
 echo "<tbody>";
@@ -112,6 +112,7 @@ foreach ($items as $item) { // per ogni squadra
         // stampa tabella (riga player)
         echo '<tr>';
         echo '<td>'.$nome.'</td>';
+        echo '<td>'.$ruolo.'</td>';
         echo '<td>'.$v.'</td>';
         echo '<td><b>'.($v + $bm).'</b></td>';
         echo '<td>'.$ae.'</td>';

@@ -45,7 +45,6 @@ $('#btnSubmit').on('click', function() {
 				row.append($('<th>').html('V'));
 				row.append($('<th>').html('A/E'));
 				row.append($('<th>').html('Gf'));
-				row.append($('<th>').html('Gr'));
 				row.append($('<th>').html('Gs'));
 				row.append($('<th>').html('Rp'));
 				row.append($('<th>').html('Rs'));
@@ -56,7 +55,7 @@ $('#btnSubmit').on('click', function() {
 				table.append(row);
 				// stampa titolari
                 
-                // result(Nome -> Ruo FV V AE Gf Gr Gs Rp Rs Au As BM, ...) 
+                // result(Nome -> Ruo FV V AE Gf Gs Rp Rs Au As BM, ...) 
 				for(key in data.result)
 				{
 					// console.log(key + ':' + data.result[key]);
