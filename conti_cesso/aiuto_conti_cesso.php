@@ -23,129 +23,114 @@
 
         <!-- Add your site or application content here -->
 
-      
-      
-      <?php 
-      
-      // require_once 'simple_html_dom.php';
-      require_once 'url_to_absolute.php';
-      require_once 'auto_login_2.php';
-      require_once 'helper.php';
-      
-      $login_url = "http://www.fantagazzetta.com/";
-      $url = "http://www.fantagazzetta.com/voti-fantagazzetta-serie-A";
-      $post_data = "__EVENTTARGET=&__EVENTARGUMENT=&__VIEWSTATE=%2FwEPDwUIMjgxMzU3NjdkGAEFSmN0bDAwJEhlYWRlck1hc3RlclBhZ2VLbm9iJFJlZ2lzdHJhemlvbmUxJE9wZW5BdXRoUHJvdmlkZXJzMSRwcm92aWRlcnNMaXN0DxQrAA5kZGRkZGRkFCsAAWQCAWRkZGYC%2F%2F%2F%2F%2Fw9kqs%2Bx9ktCq0IAe8gJ4IiLPJNmVEw%3D&__VIEWSTATEGENERATOR=8D0E13E6&__EVENTVALIDATION=%2FwEdAAcMm7hjVdh5a9Y%2FTwJYDocm5126SdI5cH%2FexPLifNENm2hKE0VpzwjgoRGZQ8MF%2FamKKzao9vFcme%2BNmQ0yf2tWGV58mExs2H6p%2FqKf4qu9Jrz8DPGBlZ4hfV7pAI%2F%2FL%2BL0Txe3QmN96w1lx2aicDsj6KHa9bYh6lS00UHc0aVnUFwbrBY%3D&ctl00%24HeaderMasterPageKnob%24LoginMasterKnob%24TextBoxUserName=pbranigade&ctl00%24HeaderMasterPageKnob%24LoginMasterKnob%24TextBoxPassword=1234abcd&ctl00%24HeaderMasterPageKnob%24LoginMasterKnob%24ButtonSubmit=Login&ctl00%24ContentPlaceHolder1%24CercaHome1%24TextBoxSearch=";
-      
-      login($login_url, $post_data);
-      
-      $html = grab_page($url);
-      $dom = new DOMDocument();
-      @$dom->loadHTML($html);
-      $xpath = new DOMXpath($dom);
-      
-      echo '<div class="container">';
-	  echo '<p></p>';
-	  echo '<a href="conti_cesso.html" class="btn btn-info btn-md" role="button">Back</a>';
-	  echo '<h1 align="center">Voti ultima giornata</h1>';
-      echo '<table class="table table-bordered table-condensed"><thead><tr>';
+<?php
 
-      echo "<th>Nome <th>V <th>AE <th>Gf <th>Gr <th>Gs <th>Rp <th>Rs <th>Au <th>As <th>BM <th>TOT";
-      
-      echo "</tr></thead>";
-      echo "<tbody>";
-      //echo "<td> test<td> test<td> test<td> test<td> test<td> test<td> test<td> test<td> test<td> test<td> test<td> test";
-      //echo '<tr><td colspan="12" align="center">TEST</td></tr>';
-      
-      # get team names
-      $teamobjs = $xpath->query('//div[@id="allvotes"]');
-      foreach ($teamobjs as $teamobj){
-      	$teams = $xpath->query('div[1]/div[1]', $teamobj);
-      	foreach ($teams as $team) {
-                  // riga nome squadra A
-      		echo '<tr><td colspan="12" align="center">'.$team->nodeValue.'</td></tr>';
-      	}	
-      	$players = $xpath->query('div[1]/table[1]//tr[@class="P"]',$teamobj);
-      	foreach ($players as $player) {
-      		//echo $player->nodeValue."<br/>";
-      		$names = $xpath->query('td[@class="n"]', $player);
-      		$bm = 0;
-      		$v = 0;
-      		foreach ($names as $name) { //only one
-      			// Nome
-                        echo '<tr>';
-      			echo "<td>".$name->nodeValue." ";
-      			// Voto
-      			$voto = $name->nextSibling;
-                // controlla se il calciatore è senza voto, se non lo è, stampa voto 
-                // e mette il voto in $v, che serve per il calcolo finale
-                if ($voto->attributes->item(0)->nodeValue == 'u') {
-                    echo "<td>S.V.";
-                    $v = 0;
-                } else {
-                    echo "<td>".$voto->nodeValue." ";
-                    $v = GetFloat(substr($voto->nodeValue, 0, -1));    
-                }
-      			
-      			// Amm. o Esp.
-      			if ($voto->attributes->item(0)->nodeValue == 'vamm') {
-      				echo "<td>"."AMM ";
-      				$bm = $bm - 0.5;
-      			} elseif ($voto->attributes->item(0)->nodeValue == 'vesp') {
-      				echo "<td>"."ESP ";
-      				$bm = $bm - 1;
-      			} else {
-      				echo "<td>"."- ";
-      			}
-      			// Gf
-      			$gf = $voto->nextSibling;
-      			echo "<td>".$gf->nodeValue." ";
-      			if ($gf->nodeValue > 0) {$bm = $bm + ($gf->nodeValue)*3;}
-      			//Gr
-      			$gr = $gf->nextSibling;
-      			echo "<td>".$gr->nodeValue." ";
-      			if ($gr->nodeValue > 0) {$bm = $bm + ($gr->nodeValue)*3;}
-      			//Gs
-      			$gs = $gr->nextSibling;
-      			echo "<td>".$gs->nodeValue." ";
-      			if ($gs->nodeValue > 0) {$bm = $bm - ($gs->nodeValue)*1;}
-      			//Rp
-      			$rp = $gs->nextSibling;
-      			echo "<td>".$rp->nodeValue." ";
-      			if ($rp->nodeValue > 0) {$bm = $bm + ($rp->nodeValue)*3;}
-      			//Rs
-      			$rs = $rp->nextSibling;
-      			echo "<td>".$rs->nodeValue." ";
-      			if ($rs->nodeValue > 0) {$bm = $bm - ($rs->nodeValue)*1;}
-      			//Au
-      			$au = $rs->nextSibling;
-      			echo "<td>".$au->nodeValue." ";
-      			if ($au->nodeValue > 0) {$bm = $bm - ($au->nodeValue)*2;}
-      		}
-      
-      		// # assist
-      		$assists = $xpath->query('td[@class="a green "]', $player);
-      		$numAssist = $assists->item(0)->nodeValue;
-      		if ($numAssist > 0) {
-      			//echo "Assist: ".$numAssist;
-      			echo "<td>".$numAssist;
-      			$bm = $bm + ($numAssist)*1;
-      		} else {
-                        echo "<td>"."- ";
-                  }
-      		// echo "BM: ".$bm." ";
-      		// echo "TOT: ".($bm + $v)." ";
-      		echo "<td>".$bm." ";
-      		echo "<td>".($bm + $v)." ";
-                  echo '</tr>';
-      	}
-      }
-      //exit(0);
+function mytrim($mystring){
+    $string = preg_replace("/\s/",'',$mystring);
+    $string = htmlentities($string, null, 'utf-8');
+    $string = str_replace("&nbsp;", "-", $string);
+    return $string;
+}
 
-      echo "</tbody></table></div>";
-      
-      echo "-- by Zniff --";
-      
-      ?>
-    </body>
+
+//$url = 'http://www.pianetafantacalcio.it/Voti_Ufficiali.asp';
+//$url = 'http://www.pianetafantacalcio.it/Voti-Ufficiali.asp?GiornataA=34&Tipolink=0';
+$url = 'http://www.pianetafantacalcio.it/Voti-Ufficiosi.asp';
+
+$ch = curl_init();
+$timeout = 5;
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+$html = curl_exec($ch);
+curl_close($ch);
+
+
+$dom = new DOMDocument();
+@$dom->loadHTML($html);
+$xpath = new DOMXpath($dom);
+
+echo '<div class="container">';
+echo '<p></p>';
+echo '<a href="conti_cesso.html" class="btn btn-info btn-md" role="button">Back</a>';
+echo '<h1 align="center">Voti ultima giornata</h1>';
+echo '<table class="table table-bordered table-condensed"><thead><tr>';
+
+echo "<th>Nome <th>V <th>FV <th>AE <th>Gf <th>Gs <th>Rp <th>Rs <th>Au <th>As <th>BM";
+
+echo "</tr></thead>";
+echo "<tbody>";
+
+    
+//squadre
+$items = $xpath->query('//table[contains(@class,"genericodue")]');
+
+foreach ($items as $item) { // per ogni squadra
+    
+    // nome squadra
+    $teams = $xpath->query('tr[2]/td[3]', $item);
+    foreach  ($teams as $team) {
+        //echo $team->nodeValue; // TBD
+        echo '<tr><td colspan="12" align="center"><h4>'.$team->nodeValue.'</h4></td></tr>';
+    }
+    
+    // dati calciatori per ogni squadra
+    $players = $xpath->query('tr[contains(@class,"tabella")]',$item);
+    foreach  ($players as $player) { //per ogni player
+        
+        $dati = $player->childNodes;
+//        $i=0;
+//        for ($i=0;$i<=$dati->length;$i++) {
+//          echo $i.' '.$dati->item($i)->nodeValue.'</br>';  
+//        }
+        
+        $nome =  $dati->item(4)->nodeValue; // no trim, altrimenti nome attaccato a cognome
+        $ruolo = mytrim($dati->item(2)->nodeValue);
+        $v = mytrim($dati->item(12)->nodeValue);
+        $gf = mytrim($dati->item(14)->nodeValue);
+        $gs = mytrim($dati->item(16)->nodeValue);
+        $au = mytrim($dati->item(18)->nodeValue);
+        $as = mytrim($dati->item(30)->nodeValue); //assist dal CorrieredS
+        $rp = mytrim($dati->item(44)->nodeValue);
+        $rs = mytrim($dati->item(42)->nodeValue);
+        $amm = $xpath->query('td[@class="cart-giallo"]', $player);
+        $esp = $xpath->query('td[@class="cart-rosso"]', $player);
+        
+        $v = (float)$v;
+        $bm = (float)$gf*3-(float)$gs-(float)$au*2+(float)$as+(float)$rp*3-(float)$rs*3;
+        
+        // stampa semplice
+//        echo $nome.' '.$ruolo.' '.$v.' '.$gf.' '.$gs.' '.$au.' '.$as.' '.$rp.' '.$rs;
+        $ae = '-';
+        if ($amm->length > 0) {$bm = $bm -0.5; $ae='AMM';}
+        if ($esp->length > 0) {$bm = $bm -1; $ae='ESP';}
+//        echo ' '.$bm.' ';
+//        echo '<b>'.($v + $bm).'</b>';
+//        echo '</br>'; 
+        
+        
+        // stampa tabella (riga player)
+        echo '<tr>';
+        echo '<td>'.$nome.'</td>';
+        echo '<td>'.$v.'</td>';
+        echo '<td><b>'.($v + $bm).'</b></td>';
+        echo '<td>'.$ae.'</td>';
+        echo '<td>'.$gf.'</td>';
+        echo '<td>'.$gs.'</td>';
+        echo '<td>'.$rp.'</td>';
+        echo '<td>'.$rs.'</td>';
+        echo '<td>'.$au.'</td>';
+        echo '<td>'.$as.'</td>';
+        echo '<td>'.$bm.'</td>';
+        
+        echo '</tr>';
+        
+        // fine player        
+    }
+    //echo '</br>'; // fine squadra
+}
+//echo "-- by Zniff --";
+
+?>
+</body>
 </html>
-

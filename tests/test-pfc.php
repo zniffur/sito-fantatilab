@@ -35,6 +35,7 @@ function mytrim($mystring){
 
 $url = 'http://www.pianetafantacalcio.it/Voti_Ufficiali.asp';
 $url = 'http://www.pianetafantacalcio.it/Voti-Ufficiali.asp?GiornataA=34&Tipolink=0';
+$url = 'http://www.pianetafantacalcio.it/Voti-Ufficiosi.asp';
 
 $ch = curl_init();
 $timeout = 5;
@@ -49,6 +50,18 @@ $dom = new DOMDocument();
 @$dom->loadHTML($html);
 $xpath = new DOMXpath($dom);
 
+echo '<div class="container">';
+echo '<p></p>';
+echo '<a href="conti_cesso.html" class="btn btn-info btn-md" role="button">Back</a>';
+echo '<h1 align="center">Voti ultima giornata</h1>';
+echo '<table class="table table-bordered table-condensed"><thead><tr>';
+
+echo "<th>Nome <th>V <th>FV <th>AE <th>Gf <th>Gs <th>Rp <th>Rs <th>Au <th>As <th>BM";
+
+echo "</tr></thead>";
+echo "<tbody>";
+
+    
 //squadre
 $items = $xpath->query('//table[contains(@class,"genericodue")]');
 
@@ -57,9 +70,9 @@ foreach ($items as $item) { // per ogni squadra
     // nome squadra
     $teams = $xpath->query('tr[2]/td[3]', $item);
     foreach  ($teams as $team) {
-        echo $team->nodeValue; // TBD
+        //echo $team->nodeValue; // TBD
+        echo '<tr><td colspan="12" align="center"><h4>'.$team->nodeValue.'</h4></td></tr>';
     }
-    echo '</br>';
     
     // dati calciatori per ogni squadra
     $players = $xpath->query('tr[contains(@class,"tabella")]',$item);
@@ -77,7 +90,7 @@ foreach ($items as $item) { // per ogni squadra
         $gf = mytrim($dati->item(14)->nodeValue);
         $gs = mytrim($dati->item(16)->nodeValue);
         $au = mytrim($dati->item(18)->nodeValue);
-        $as = mytrim($dati->item(20)->nodeValue);
+        $as = mytrim($dati->item(30)->nodeValue); //assist dal CorrieredS
         $rp = mytrim($dati->item(44)->nodeValue);
         $rs = mytrim($dati->item(42)->nodeValue);
         $amm = $xpath->query('td[@class="cart-giallo"]', $player);
@@ -85,19 +98,38 @@ foreach ($items as $item) { // per ogni squadra
         
         $v = (float)$v;
         $bm = (float)$gf*3-(float)$gs-(float)$au*2+(float)$as+(float)$rp*3-(float)$rs*3;
-            
-        echo $nome.' '.$ruolo.' '.$v.' '.$gf.' '.$gs.' '.$au.' '.$as.' '.$rp.' '.$rs;
-        if ($amm->length > 0) {echo ' AMM '; $bm = $bm -0.5;}
-        if ($esp->length > 0) {echo ' ESP '; $bm = $bm -1;}
-        echo ' '.$bm.' ';
-        echo '<b>'.($v + $bm).'</b>';
         
-        echo '</br>'; // fine player
-                
+        // stampa semplice
+//        echo $nome.' '.$ruolo.' '.$v.' '.$gf.' '.$gs.' '.$au.' '.$as.' '.$rp.' '.$rs;
+        $ae = '-';
+        if ($amm->length > 0) {$bm = $bm -0.5; $ae='AMM';}
+        if ($esp->length > 0) {$bm = $bm -1; $ae='ESP';}
+//        echo ' '.$bm.' ';
+//        echo '<b>'.($v + $bm).'</b>';
+//        echo '</br>'; 
+        
+        
+        // stampa tabella (riga player)
+        echo '<tr>';
+        echo '<td>'.$nome.'</td>';
+        echo '<td>'.$v.'</td>';
+        echo '<td><b>'.($v + $bm).'</b></td>';
+        echo '<td>'.$ae.'</td>';
+        echo '<td>'.$gf.'</td>';
+        echo '<td>'.$gs.'</td>';
+        echo '<td>'.$rp.'</td>';
+        echo '<td>'.$rs.'</td>';
+        echo '<td>'.$au.'</td>';
+        echo '<td>'.$as.'</td>';
+        echo '<td>'.$bm.'</td>';
+        
+        echo '</tr>';
+        
+        // fine player        
     }
-    echo '</br>'; // fine squadra
+    //echo '</br>'; // fine squadra
 }
-echo "-- by Zniff --";
+//echo "-- by Zniff --";
 
 ?>
 </body>
