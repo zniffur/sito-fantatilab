@@ -47,15 +47,15 @@
 <div id='sq6' style='display: none;' align='center'><? include ('sq6.htm') ?></div>
 <div id='sq7H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq7')"><font class='intest2'>Atletico Caipirinha</font></a></div>
 <div id='sq7' style='display: none;' align='center'><? include ('sq7.htm') ?></div>
-<div id='sq8H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq8')"><font class='intest2'>Zunin San Peterione</font></a></div>
+<div id='sq8H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq8')"><font class='intest2'>Qui Quo Qua</font></a></div>
 <div id='sq8' style='display: none;' align='center'><? include ('sq8.htm') ?></div>
 <div id='sq9H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq9')"><font class='intest2'>SmallAzz</font></a></div>
 <div id='sq9' style='display: none;' align='center'><? include ('sq9.htm') ?></div>
 <div id='sq10H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq10')"><font class='intest2'>Xeltic Panic</font></a></div>
 <div id='sq10' style='display: none;' align='center'><? include ('sq10.htm') ?></div>
-<div id='sq11H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq11')"><font class='intest2'>Cioppese</font></a></div>
+<div id='sq11H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq11')"><font class='intest2'>CassaintegratiFincantieri</font></a></div>
 <div id='sq11' style='display: none;' align='center'><? include ('sq11.htm') ?></div>
-<div id='sq12H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq12')"><font class='intest2'>Heroes de la Baja Jamon</font></a></div>
+<div id='sq12H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq12')"><font class='intest2'>Burak Black Cocks</font></a></div>
 <div id='sq12' style='display: none;' align='center'><? include ('sq12.htm') ?></div>
 <div id='sq13H' class='i-layer' align='left'>&nbsp;<a href='#' onclick="invertiDisplayLayer('sq13')"><font class='intest2'>River Cyccy</font></a></div>
 <div id='sq13' style='display: none;' align='center'><? include ('sq13.htm') ?></div>

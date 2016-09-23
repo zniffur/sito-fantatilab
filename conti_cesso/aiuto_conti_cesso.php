@@ -68,8 +68,8 @@ $items = $xpath->query('//table[contains(@class,"genericodue")]');
 foreach ($items as $item) { // per ogni squadra
     
     // nome squadra
-    $teams = $xpath->query('tr[2]/td[3]', $item);
-    foreach  ($teams as $team) {
+    $teams = $xpath->query('tr[3]/td[2]', $item); 
+    foreach  ($teams as $team) {		
         //echo $team->nodeValue; // TBD
         echo '<tr><td colspan="12" align="center"><h4>'.$team->nodeValue.'</h4></td></tr>';
     }
@@ -79,20 +79,21 @@ foreach ($items as $item) { // per ogni squadra
     foreach  ($players as $player) { //per ogni player
         
         $dati = $player->childNodes;
-//        $i=0;
-//        for ($i=0;$i<=$dati->length;$i++) {
-//          echo $i.' '.$dati->item($i)->nodeValue.'</br>';  
-//        }
+        /*$i=0;
+        for ($i=0;$i<=$dati->length;$i++) {
+          echo $i.' '.$dati->item($i)->nodeValue.'</br>';  
+        }*/
         
-        $nome =  $dati->item(4)->nodeValue; // no trim, altrimenti nome attaccato a cognome
-        $ruolo = mytrim($dati->item(2)->nodeValue);
-        $v = mytrim($dati->item(12)->nodeValue);
-        $gf = mytrim($dati->item(14)->nodeValue);
-        $gs = mytrim($dati->item(16)->nodeValue);
-        $au = mytrim($dati->item(18)->nodeValue);
-        $as = mytrim($dati->item(30)->nodeValue); //assist dal CorrieredS
-        $rp = mytrim($dati->item(44)->nodeValue);
-        $rs = mytrim($dati->item(42)->nodeValue);
+        $ruolo = mytrim($dati->item(0)->nodeValue);
+		$nome =  $dati->item(2)->nodeValue; // no trim, altrimenti nome attaccato a cognome
+        $v = mytrim($dati->item(4)->nodeValue);
+        $gf = mytrim($dati->item(6)->nodeValue);
+        $gs = mytrim($dati->item(8)->nodeValue);
+        $au = mytrim($dati->item(10)->nodeValue);
+        $as = mytrim($dati->item(12)->nodeValue); //assist dal CorrieredS
+        $rs = mytrim($dati->item(34)->nodeValue);
+		$rp = mytrim($dati->item(36)->nodeValue);
+        
         $amm = $xpath->query('td[@class="cart-giallo"]', $player);
         $esp = $xpath->query('td[@class="cart-rosso"]', $player);
         
