@@ -35,21 +35,26 @@ function get_all_stats_from_fg() {
 	foreach ($items as $item) { // per ogni squadra
         
 		// dati calciatori per ogni squadra
-        $players = $xpath->query('tr[contains(@class,"tabella")]',$item);
+		$players = $xpath->query('tr[contains(@class,"portiere-tabella") or contains(@class,"difensore-tabella") or contains(@class,"centrocampista-tabella") or contains(@class,"attaccante-tabella") ]',$item);
 		
         foreach  ($players as $player) { //per ogni player
 			
             $dati = $player->childNodes;
 
-            $nome =  $dati->item(4)->nodeValue; // no trim, altrimenti nome attaccato a cognome
-            $ruolo = mytrim($dati->item(2)->nodeValue);
-            $v = mytrim($dati->item(12)->nodeValue);
-            $gf = mytrim($dati->item(14)->nodeValue);
-            $gs = mytrim($dati->item(16)->nodeValue);
-            $au = mytrim($dati->item(18)->nodeValue);
-            $as = mytrim($dati->item(30)->nodeValue); //assist dal CorrieredS
-            $rp = mytrim($dati->item(44)->nodeValue);
-            $rs = mytrim($dati->item(42)->nodeValue);
+			$ruolo = mytrim($dati->item(0)->nodeValue);
+			
+            $nometmp =  $dati->item(2)->nodeValue; // no trim, altrimenti nome attaccato a cognome
+			$pieces = explode(" ", $nometmp);
+			$nome = $pieces[0]; // solo cognome
+			
+			$v = mytrim($dati->item(4)->nodeValue);
+			$gf = mytrim($dati->item(6)->nodeValue);
+			$gs = mytrim($dati->item(8)->nodeValue);
+			$au = mytrim($dati->item(10)->nodeValue);
+			$as = mytrim($dati->item(12)->nodeValue); //assist dal CorrieredS
+			$rs = mytrim($dati->item(34)->nodeValue);
+			$rp = mytrim($dati->item(36)->nodeValue);
+			
             $amm = $xpath->query('td[@class="cart-giallo"]', $player);
             $esp = $xpath->query('td[@class="cart-rosso"]', $player);
 
@@ -59,7 +64,7 @@ function get_all_stats_from_fg() {
             $ae = '-';
             if ($amm->length > 0) {$bm = $bm -0.5; $ae='AMM';}
             if ($esp->length > 0) {$bm = $bm -1; $ae='ESP';}
-
+			
 			$obj[$nome] = array(($bm + $v), $v, $ae, $gf, $gs, $rp, $rs, $au, $as, $bm);
 		}// fine player
 	} // fine squadra
@@ -116,10 +121,22 @@ if(isset($_POST['frmz'],$_POST['fSquadra'])){
 					break;
 			}
 
+			// il nome del calciatore su pianetafantacalcio è COGNOME N., il nome su FCM è COGNOME NOME 
+			// bisogna che siano nello stesso formato, altrimenti non si ottiene un match sull'array stats
+			
 			// strippa il cognome da $obj[$i]->{'Nome'}
 			$cogn_nome = $obj[$i]->{'Nome'};
 			$pieces = explode(" ", $cogn_nome);
-			$cogn = $pieces[0];
+			$cognome = $pieces[0];
+			
+			//$nm = $pieces[1];
+			// prendo l'iniziale del Nome
+			
+			//$iniz = substr($nm, 0);	
+			//$cogn = $cognome." ".$iniz.".";
+			$cogn = $cognome; 	// solo cognome
+			
+			/*
 			# gestione eccezioni cognomi
 			if ($cogn == 'DE'||$cogn=='DI') $cogn = $cogn." ".$pieces[1];
 			if ($cogn == 'DONNARUMMA') $cogn = 'DONNARUMMA G.';
@@ -154,7 +171,7 @@ if(isset($_POST['frmz'],$_POST['fSquadra'])){
 			if ($cogn_nome == 'ALVAREZ Ricardo Gabriel') $cogn =  'ALVAREZ R.';
 			if ($cogn_nome == 'EL SHAARAWY Stephan') $cogn =  'EL SHAARAWY';
 			if ($cogn_nome == 'M\'POKU Paul-Jose') $cogn =  'MPOKU';
-
+*/
 			// cercalo in $stats
 		    $tmpstats = $stats[$cogn];
 		    

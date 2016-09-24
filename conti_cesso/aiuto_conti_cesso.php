@@ -33,7 +33,7 @@ function mytrim($mystring){
 }
 
 
-//$url = 'http://www.pianetafantacalcio.it/Voti_Ufficiali.asp';
+//$url = 'http://www.pianetafantacalcio.it/Voti-Ufficiali.asp';
 //$url = 'http://www.pianetafantacalcio.it/Voti-Ufficiali.asp?GiornataA=34&Tipolink=0';
 $url = 'http://www.pianetafantacalcio.it/Voti-Ufficiosi.asp';
 
@@ -75,17 +75,29 @@ foreach ($items as $item) { // per ogni squadra
     }
     
     // dati calciatori per ogni squadra
-    $players = $xpath->query('tr[contains(@class,"tabella")]',$item);
+    $players = $xpath->query('tr[contains(@class,"portiere-tabella") or contains(@class,"difensore-tabella") or contains(@class,"centrocampista-tabella") or contains(@class,"attaccante-tabella") ]',$item);
     foreach  ($players as $player) { //per ogni player
         
         $dati = $player->childNodes;
-        /*$i=0;
+/*         $i=0;
         for ($i=0;$i<=$dati->length;$i++) {
           echo $i.' '.$dati->item($i)->nodeValue.'</br>';  
-        }*/
+        } */
         
         $ruolo = mytrim($dati->item(0)->nodeValue);
-		$nome =  $dati->item(2)->nodeValue; // no trim, altrimenti nome attaccato a cognome
+		
+		$nome_ext =  $dati->item(2)->childNodes; 
+		/* $i=0;
+        for ($i=0;$i<=$nome_ext->length;$i++) {
+          echo $i.' '.$nome_ext->item($i)->nodeValue.'</br>';  
+        } */
+		$nometmp = $nome_ext->item(0)->nodeValue; // no trim, altrimenti nome attaccato a cognome
+		//$nometmp = $nome_ext->item(0)->innerText; // no trim, altrimenti nome attaccato a cognome
+		//$pieces = explode(" ", $nometmp);
+		//$nome = $pieces[0]; // solo cognome
+		//if ($nome == 'DE'||$nome=='DI'||$nome == 'DA') $nome = $nome." ".$pieces[1];
+		$nome = $nometmp;
+			
         $v = mytrim($dati->item(4)->nodeValue);
         $gf = mytrim($dati->item(6)->nodeValue);
         $gs = mytrim($dati->item(8)->nodeValue);
