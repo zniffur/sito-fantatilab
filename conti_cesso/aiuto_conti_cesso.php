@@ -79,6 +79,7 @@ foreach ($items as $item) { // per ogni squadra
     foreach  ($players as $player) { //per ogni player
         
         $dati = $player->childNodes;
+        // DEBUG
 /*         $i=0;
         for ($i=0;$i<=$dati->length;$i++) {
           echo $i.' '.$dati->item($i)->nodeValue.'</br>';  
@@ -86,17 +87,34 @@ foreach ($items as $item) { // per ogni squadra
         
         $ruolo = mytrim($dati->item(0)->nodeValue);
 		
+        // 2016: nella cella del nome ci sono altre info, e.g. amm/esp, goal vittoria, sostitut. Bisogna filtrare.
+        // chiamo questi dati estesi $nome_ext
 		$nome_ext =  $dati->item(2)->childNodes; 
-		/* $i=0;
+        // DEBUG
+        /*$i=0;
         for ($i=0;$i<=$nome_ext->length;$i++) {
-          echo $i.' '.$nome_ext->item($i)->nodeValue.'</br>';  
-        } */
-		$nometmp = $nome_ext->item(0)->nodeValue; // no trim, altrimenti nome attaccato a cognome
+          echo $i.' '.$nome_ext->item($i)->nodeName.'</br>';  
+        }*/ 
+		$nome = $nome_ext->item(0)->nodeValue; // no trim, altrimenti nome attaccato a cognome
+        // ammonizioni e espulsioni
+        if ($nome_ext->item(4)) {
+            
+            // attributo class del 4o nodo figlio di $nome_ext contiene i cartellini
+            $aec = $nome_ext->item(4)->attributes->getNamedItem("class")->nodeValue;
+            $amm = 0;
+            $esp = 0;
+            if ($aec == 'cart-giallo') {$amm=-0.5;$ae='AMM';}
+            if ($aec == 'cart-rosso') {$esp=-1;$ae='ESP';}
+        } else {
+            $ae = '-';
+            $amm = 0;
+            $esp = 0;
+        }
+        
 		//$nometmp = $nome_ext->item(0)->innerText; // no trim, altrimenti nome attaccato a cognome
 		//$pieces = explode(" ", $nometmp);
 		//$nome = $pieces[0]; // solo cognome
-		//if ($nome == 'DE'||$nome=='DI'||$nome == 'DA') $nome = $nome." ".$pieces[1];
-		$nome = $nometmp;
+		//if ($nome == 'DE'||$nome=='DI'||$nome == 'DA') $nome = $nome." ".$pieces[1]
 			
         $v = mytrim($dati->item(4)->nodeValue);
         $gf = mytrim($dati->item(6)->nodeValue);
@@ -106,17 +124,14 @@ foreach ($items as $item) { // per ogni squadra
         $rs = mytrim($dati->item(34)->nodeValue);
 		$rp = mytrim($dati->item(36)->nodeValue);
         
-        $amm = $xpath->query('td[@class="cart-giallo"]', $player);
-        $esp = $xpath->query('td[@class="cart-rosso"]', $player);
+        //$amm = $xpath->query('tr[@class="cart-giallo"]', $player);
+        //$esp = $xpath->query('tr[@class="cart-rosso"]', $player);
         
         $v = (float)$v;
-        $bm = (float)$gf*3-(float)$gs-(float)$au*2+(float)$as+(float)$rp*3-(float)$rs*3;
+        $bm = (float)$gf*3-(float)$gs-(float)$au*2+(float)$as+(float)$rp*3-(float)$rs*3+(float)$amm+(float)$esp;
         
         // stampa semplice
 //        echo $nome.' '.$ruolo.' '.$v.' '.$gf.' '.$gs.' '.$au.' '.$as.' '.$rp.' '.$rs;
-        $ae = '-';
-        if ($amm->length > 0) {$bm = $bm -0.5; $ae='AMM';}
-        if ($esp->length > 0) {$bm = $bm -1; $ae='ESP';}
 //        echo ' '.$bm.' ';
 //        echo '<b>'.($v + $bm).'</b>';
 //        echo '</br>'; 

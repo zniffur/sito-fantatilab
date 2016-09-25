@@ -43,10 +43,27 @@ function get_all_stats_from_fg() {
 
 			$ruolo = mytrim($dati->item(0)->nodeValue);
 			
-            $nometmp =  $dati->item(2)->nodeValue; // no trim, altrimenti nome attaccato a cognome
-			$pieces = explode(" ", $nometmp);
-			$nome = $pieces[0]; // solo cognome
-			
+            $nome_ext =  $dati->item(2)->childNodes;  // 2016: cella nome contiene altri dati
+            // nodo figlio 0 contiene il nome del calciatore
+            $nometmp = $nome_ext->item(0)->nodeValue; // no trim, altrimenti nome attaccato a cognome
+			//$pieces = explode(" ", $nometmp);
+			//$nome = $pieces[0]; // solo cognome (NOTA: PER MOLTI CALCIATORI FUNZIONA)
+            $nome = $nometmp; // cognome + iniziale nome + '.' BUFFON G.
+
+            // ammonizioni e espulsioni
+            if ($nome_ext->item(4)) {
+                // attributo class del 4o nodo figlio di $nome_ext contiene i cartellini
+                $aec = $nome_ext->item(4)->attributes->getNamedItem("class")->nodeValue;
+                $amm = 0;
+                $esp = 0;
+                if ($aec == 'cart-giallo') {$amm=-0.5;$ae='AMM';}
+                if ($aec == 'cart-rosso') {$esp=-1;$ae='ESP';}
+            } else {
+                $ae = '-';
+                $amm = 0;
+                $esp = 0;
+            }
+
 			$v = mytrim($dati->item(4)->nodeValue);
 			$gf = mytrim($dati->item(6)->nodeValue);
 			$gs = mytrim($dati->item(8)->nodeValue);
@@ -55,15 +72,9 @@ function get_all_stats_from_fg() {
 			$rs = mytrim($dati->item(34)->nodeValue);
 			$rp = mytrim($dati->item(36)->nodeValue);
 			
-            $amm = $xpath->query('td[@class="cart-giallo"]', $player);
-            $esp = $xpath->query('td[@class="cart-rosso"]', $player);
 
             $v = (float)$v;
-            $bm = (float)$gf*3-(float)$gs-(float)$au*2+(float)$as+(float)$rp*3-(float)$rs*3;
-
-            $ae = '-';
-            if ($amm->length > 0) {$bm = $bm -0.5; $ae='AMM';}
-            if ($esp->length > 0) {$bm = $bm -1; $ae='ESP';}
+            $bm = (float)$gf*3-(float)$gs-(float)$au*2+(float)$as+(float)$rp*3-(float)$rs*3+(float)$amm+(float)$esp;;
 			
 			$obj[$nome] = array(($bm + $v), $v, $ae, $gf, $gs, $rp, $rs, $au, $as, $bm);
 		}// fine player
@@ -97,10 +108,9 @@ if(isset($_POST['frmz'],$_POST['fSquadra'])){
 	$result = array();
 	$riserve = array();
 
-	for ($i=1; $i < count($obj); $i++) { 
-        // per ogni calciatore delle formazioni della giornata (frmz)
-        // se è della squadra fSquadra e se è titolare o riserva (Pos>0)
-		if ($obj[$i]->{'IDSquadra'} == $sq && $obj[$i]->{'Pos'} >= 0) {
+	for ($i=1; $i < count($obj); $i++) {  // per ogni calciatore delle formazioni della giornata (frmz)
+        
+		if ($obj[$i]->{'IDSquadra'} == $sq && $obj[$i]->{'Pos'} >= 0) {  // se è della squadra fSquadra e se è titolare o riserva (Pos>0)
 
 			// $result[$obj[$i]->{'Nome'}] = $obj[$i]->{'Pos'};
 
@@ -125,16 +135,17 @@ if(isset($_POST['frmz'],$_POST['fSquadra'])){
 			// bisogna che siano nello stesso formato, altrimenti non si ottiene un match sull'array stats
 			
 			// strippa il cognome da $obj[$i]->{'Nome'}
-			$cogn_nome = $obj[$i]->{'Nome'};
-			$pieces = explode(" ", $cogn_nome);
+			$nome_fcm = $obj[$i]->{'Nome'}; // cognome e nome completo FCM
+			$pieces = explode(" ", $nome_fcm);
 			$cognome = $pieces[0];
+			$nome = $pieces[1];
 			
-			//$nm = $pieces[1];
 			// prendo l'iniziale del Nome
 			
-			//$iniz = substr($nm, 0);	
-			//$cogn = $cognome." ".$iniz.".";
-			$cogn = $cognome; 	// solo cognome
+			$iniz = substr($nome, 0, 1);	
+			$cogn = $cognome." ".$iniz.".";  // cognome + iniziale + '.'
+			//$cogn = $cognome; 	// solo cognome
+            //echo $cogn;
 			
 			/*
 			# gestione eccezioni cognomi
