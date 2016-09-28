@@ -110,7 +110,7 @@
 	Cs	IAGO FALQUE Silva	sv/ng	0	sv/ng		P	MARCHETTI Federico	sv/ng	0	sv/ng
 	D	RISPOLI Andrea	6,5	0	6,5		P	STRAKOSHA Thomas	6	-2	4
 	C	CUADRADO Juan Guillermo	sv/ng	0	sv/ng		D	LETSCHERT Timo	5,5	0	5,5
-	C	GIACCHERINI Emanuele	sv/ng	0	sv/ng		D	DIMARCO Federico	5,5	-0,5	5
+	C	GIACCHERINI Emanuele	sv/ng	0	sv/ng		D	DIMARCO Federico	5,5	0	5,5
 	C	DIAWARA Amadou	sv/ng	0	sv/ng		C	BERNARDESCHI Federico	6,5	3	9,5
 	A	GABIGOL Barbosa Alemida	sv/ng	0	sv/ng		C	NTCHAM Olivier	6	-0,5	5,5
 	A	EWANDRO	sv/ng	0	sv/ng		C	LINETTY Karol	6	-0,5	5,5
@@ -210,36 +210,35 @@
 	C	BADU Emmanuel Agyemang	7	0	7		C	HILJEMARK Oscar Karl	6	0	6
 	C	CROCE Daniele	5,5	0	5,5		C	LEMINA Mario	6,5	0	6,5
 	C	SAPONARA Riccardo	6	0	6		C	PERISIC Ivan	6,5	0	6,5
-	CR	HETEMAJ Perparim	6	0	6		--	-------------------------	0	0	0
+	CR	HETEMAJ Perparim	6	0	6		C	ZIELINSKI Piotr	6	0	6
 	A	IMMOBILE Ciro	5,5	0	5,5		--	-------------------------	0	0	0
 	A	PAVOLETTI Leonardo	6	0	6		A	DZEKO Edin	8	6	14
 	A	PINILLA Mauricio	6,5	0	6,5		A	MILIK Arkadiusz	6	0	6
-				Parziale squadra	69					Parziale squadra	59,5
+				Parziale squadra	69					Parziale squadra	65,5
 				Fattore campo	2					Fattore campo	0
 				Modificatore portiere	0					Modificatore portiere	0,5
 				Modificatore difesa	0,5					Modificatore difesa	-0,5
 				Modificatore centrocampo	0					Modificatore centrocampo	0
 				Modificatore attacco	0,5					Modificatore attacco	0
 				Modificatore modulo	0,5					Modificatore modulo	1
-				Totale squadra	72,5					Totale squadra	60,5
-				Gol	2					Gol	0
+				Totale squadra	72,5					Totale squadra	66,5
+				Gol	2					Gol	1
 											
 		Sostituiti, panchina e tribuna						Sostituiti, panchina e tribuna			
 	Cs	GAKPE' Serge	sv/ng	0	sv/ng		Cs	PELLEGRINI Lorenzo	sv/ng	0	sv/ng
-	P	SECULIN Andrea	sv/ng	0	sv/ng		Cs	ZIELINSKI Piotr	sv/ng	0	sv/ng
-	D	SALCEDO Carlos	sv/ng	0	sv/ng		P	DA COSTA Angelo Junior	6	0	6
-	D	MURRU Nicola	5	0	5		D	ROSSETTINI Luca	sv/ng	0	sv/ng
-	D	WAGUE Molla	sv/ng	0	sv/ng		D	HOEDT Wesley	sv/ng	0	sv/ng
-	D	ALBIOL Raul	6	0	6		D	GENTILETTI Santiago	sv/ng	0	sv/ng
-	C	MEDEL Gary	7	-0,5	6,5		D	MUNOZ Ezequiel	sv/ng	0	sv/ng
-	C	DE ROSSI Daniele	sv/ng	0	sv/ng		D	SAMPIRISI Mario	4,5	0	4,5
-	C	CARMONA Carlos Emilio	sv/ng	0	sv/ng		C	KRUNIC Rade	sv/ng	0	sv/ng
-	A	RAGUSA Antonino	sv/ng	0	sv/ng		C	ASAMOAH Kwadwo	sv/ng	0	sv/ng
-	A	DJORDJEVIC Filip	5	0	5		C	ROG Marko	sv/ng	0	sv/ng
-	A	PANDEV Goran	sv/ng	0	sv/ng		A	GABBIADINI Manolo	sv/ng	0	sv/ng
-	p	BRESSAN Walter	sv/ng	0	sv/ng		A	JOVETIC Stevan	sv/ng	0	sv/ng
-	d	GOMEZ Gustavo	sv/ng	0	sv/ng		A	FLORO FLORES Antonio	6	0	6
-							p	MIRANTE Antonio	sv/ng	0	sv/ng
+	P	SECULIN Andrea	sv/ng	0	sv/ng		P	DA COSTA Angelo Junior	6	0	6
+	D	SALCEDO Carlos	sv/ng	0	sv/ng		D	ROSSETTINI Luca	sv/ng	0	sv/ng
+	D	MURRU Nicola	5	0	5		D	HOEDT Wesley	sv/ng	0	sv/ng
+	D	WAGUE Molla	sv/ng	0	sv/ng		D	GENTILETTI Santiago	sv/ng	0	sv/ng
+	D	ALBIOL Raul	6	0	6		D	MUNOZ Ezequiel	6	0	6
+	C	MEDEL Gary	7	-0,5	6,5		D	SAMPIRISI Mario	4,5	0	4,5
+	C	DE ROSSI Daniele	sv/ng	0	sv/ng		C	KRUNIC Rade	sv/ng	0	sv/ng
+	C	CARMONA Carlos Emilio	sv/ng	0	sv/ng		C	ASAMOAH Kwadwo	sv/ng	0	sv/ng
+	A	RAGUSA Antonino	sv/ng	0	sv/ng		C	ROG Marko	sv/ng	0	sv/ng
+	A	DJORDJEVIC Filip	5	0	5		A	GABBIADINI Manolo	sv/ng	0	sv/ng
+	A	PANDEV Goran	sv/ng	0	sv/ng		A	JOVETIC Stevan	sv/ng	0	sv/ng
+	p	BRESSAN Walter	sv/ng	0	sv/ng		A	FLORO FLORES Antonio	6	0	6
+	d	GOMEZ Gustavo	sv/ng	0	sv/ng		p	MIRANTE Antonio	sv/ng	0	sv/ng
 							a	KISHNA Ricardo	sv/ng	0	sv/ng
 											
 		Campionato: 1a Camp. (Andata)									
