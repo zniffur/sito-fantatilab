@@ -137,16 +137,32 @@ if(isset($_POST['frmz'],$_POST['fSquadra'])){
 			// strippa il cognome da $obj[$i]->{'Nome'}
 			$nome_fcm = $obj[$i]->{'Nome'}; // cognome e nome completo FCM
 			$pieces = explode(" ", $nome_fcm);
-			$cognome = $pieces[0];
-			$nome = $pieces[1];
-			
-			// prendo l'iniziale del Nome
+			$p0 = $pieces[0];
+			$p1 = $pieces[1];
+            
+			# gestione eccezioni cognomi
+			if ($p0 == 'DE' || $p1 == 'DI') {
+                $cognome = $p0." ".$p1;
+                $nome = $pieces[2];
+            } else {
+                $cognome = $p0;
+                $nome = $p1;
+            }
+            
+			// prendo l'iniziale del Nome e la unisco al cognome
 			
 			$iniz = substr($nome, 0, 1);	
 			$cogn = $cognome." ".$iniz.".";  // cognome + iniziale + '.'
-			//$cogn = $cognome; 	// solo cognome
-            //echo $cogn;
 			
+            
+            if ($cognome == 'JOAO' && $nome == 'PEDRO') $cogn = 'JOAO PEDRO';
+            if ($cognome == 'PUCCIARELLI') $cogn = 'PUCCIARELLI M';
+            if ($cognome == 'BERNARDESCHI') $cogn = 'BERNARDESCHI ';
+            if ($cognome == 'BOYE') $cogn = 'BOYÃ L.';
+            if ($cognome == 'MILINKOVIC-SAVIC') $cogn = 'MILINKOVIC S.';
+            if ($cognome == 'BRUNO' && $nome == 'HENRIQUE') $cogn = 'HENRIQUE B.';
+            if ($cognome == 'BONAVENTURA') $cogn = 'BONAVENTURA G';
+            
 			/*
 			# gestione eccezioni cognomi
 			if ($cogn == 'DE'||$cogn=='DI') $cogn = $cogn." ".$pieces[1];
