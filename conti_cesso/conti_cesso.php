@@ -8,10 +8,14 @@ function mytrim($mystring){
 }
 
 function get_all_stats_from_fg() {
+	
+	// test
     //$url = 'http://www.pianetafantacalcio.it/Voti_Ufficiali.asp';
     //$url = 'http://www.pianetafantacalcio.it/Voti-Ufficiali.asp?GiornataA=34&Tipolink=0';
-    $url = 'http://www.pianetafantacalcio.it/Voti-Ufficiosi.asp';
+	//$url = 'http://www.pianetafantacalcio.it/Voti-Ufficiosi.asp?GiornataA=5&Tipolink=0';
 
+	$url = 'http://www.pianetafantacalcio.it/Voti-Ufficiosi.asp';
+	
     $ch = curl_init();
     $timeout = 5;
     curl_setopt($ch, CURLOPT_URL, $url);
@@ -167,7 +171,9 @@ if(isset($_POST['frmz'],$_POST['fSquadra'])){
             if ($cognome == 'SUSO') $cogn = 'SUSO';
             if ($cognome == 'JOAO' && $nome == 'MARIO') $cogn = 'JOAO MARIO';
             if ($cognome == 'VALERO') $cogn = 'VALERO BORJA';
-            
+			if ($cognome == 'DANI' && $nome == 'ALVES') $cogn = 'ALVES D.';
+            if ($cognome == 'QUAGLIARELLA') $cogn = 'QUAGLIARELLA ';
+			if ($cognome == 'EL' && $nome == 'SHAARAWY') $cogn = 'EL SHAARAWY S';
             
 			/*
 			# gestione eccezioni cognomi
