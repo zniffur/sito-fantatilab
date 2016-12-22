@@ -177,6 +177,7 @@ if(isset($_POST['frmz'],$_POST['fSquadra'])){
 			if ($cognome == 'RADOVANOVIC') $cogn = 'RADOVANOVIC I';
 			if ($cognome == 'EDER') $cogn = 'EDER C.';
 			if ($cognome == 'NESTOROVSKI') $cogn = 'NESTOROVSKI I';
+			if ($cognome == 'GAGLIARDINI') $cogn = 'GAGLIARDINI R';
             
 			/*
 			# gestione eccezioni cognomi
