@@ -21,7 +21,7 @@ document.write(nomelega)
             <p align="left">
                 <FONT class=bnr_nml_txt color="#FFFFFF"><B> <script language="JavaScript" type="text/javascript">
 document.write(stagione)
-   </script>^ edizione | 
+   </script>^ edizione |
     <script language="JavaScript" type="text/javascript">
 document.write(anno)
    </script></B></FONT> </p>
@@ -90,6 +90,12 @@ document.write(anno)
                         <A class=nws_snipp_lst href="../conti_cesso/conti_cesso_m.html">
                             <H3><img src="img/scudetto.png" height="40" align="left">CONTI CESSO</H3>
                             <P>Fai i conti il luned&igrave; mattina</P>
+                        </A>
+                    </DIV>
+                    <DIV class=nws_article>
+                        <A class=nws_snipp_lst href="video.html">
+                            <H3><img src="img/scudetto.png" height="40" align="left">La super banfa di Dani e Toni</H3>
+                            <P>Vedi il video</P>
                         </A>
                     </DIV>
                 </TD>
